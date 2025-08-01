@@ -1,0 +1,219 @@
+.grade
+  margin-top: 5rem
+  display: flex
+  flex-direction: column
+  gap: 2rem
+  width: 100%
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &_left
+      display: flex
+      flex-direction: column
+      gap: 2rem
+      &_title
+        font-size: 4rem
+        color: rgba(7, 46, 146, 1)
+        font-weight: 500
+        font-family: "Montserrat", sans-serif
+        width: 50rem
+      &_grades, &_gradesMobile
+        display: flex
+        background: rgb(241 241 241)
+        border-radius: 30px
+        padding: .6rem
+        width: fit-content
+        //height: 4rem
+        align-items: center
+        gap: 1rem
+        &_item
+          color: rgba(9, 9, 9, 1)
+          font-family: "Montserrat", sans-serif
+          font-weight: 500
+          font-size: 1.5rem
+
+          padding: .8rem 2rem
+          border-radius: 30px
+          cursor: pointer
+        .active
+          background: rgba(255, 255, 255, 1)
+          color: rgba(7, 46, 146, 1)
+          font-weight: 700
+    &_right
+      color: rgba(0, 0, 0, 0.7)
+      font-size: 1.6rem
+      font-family: 'Montserrat', sans-serif
+      font-weight: 500
+      width: 56rem
+
+      line-height: 2.4rem
+  &__wrapper
+    display: flex
+    gap: 2rem
+    flex-wrap: wrap
+    &_box
+      border-radius: 20px
+      overflow: hidden
+      width: 305px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      height: 255px
+      border: 1px solid rgba(229, 229, 234, 1)
+      box-shadow: 0 0 4px 1px rgba(229, 229, 234, 1)
+      padding: 1.5rem
+      gap: 1rem
+      cursor: pointer
+      transition: .5s all
+      &_img
+        width: 100px
+        height: 100px
+      &_title
+        font-size: 2rem
+        color: rgba(0, 27, 97, 1)
+        font-weight: 700
+        font-family: "Montserrat", sans-serif
+
+      &_desc
+        font-size: 1.2rem
+        font-weight: 400
+        color: rgba(0, 0, 0, 0.7)
+        text-align: center
+        font-family: "Montserrat", sans-serif
+    .activeBox
+      background: rgba(7, 46, 146, 1)
+      color: white!important
+.grade__header_left_gradesMobile
+  display: none
+@media (min-width: 1920px)
+  .grade
+    width: 150rem
+@media (max-width: 1450px)
+  .grade
+    &__wrapper
+      &_box
+        width: 28rem
+@media (max-width: 1350px)
+  .grade
+    &__header
+      &_right
+        width: 40rem
+    &__wrapper
+      justify-content: center
+@media (max-width: 1150px)
+  .grade
+    &__header
+      &_left
+        &_title
+          font-size: 3rem
+      &_right
+        font-size: 1.6rem
+@media (max-width: 1090px)
+  .grade
+    &__header
+      &_left
+        &_grades
+          gap: 0
+          &_item
+            font-size: 1.4rem
+    &__wrapper
+      &_box
+        width: 25rem
+
+@media (max-width: 952px)
+  .grade
+    overflow: hidden
+
+    &__header
+      &_left
+
+        &_title
+          font-size: 2.5rem
+        &_grades
+          gap: 0
+          &_item
+            font-size: 1.2rem
+      &_right
+        font-size: 1.4rem
+        line-height: inherit
+    &__wrapper
+      &_box
+        width: 23rem
+
+@media (max-width: 800px)
+  .grade
+    &__header
+      flex-direction: column
+      align-items: flex-start
+      gap: 1rem
+      &_left
+
+        &_title
+          width: 100%
+          font-size: 2.5rem
+        &_grades
+          display: none
+        &_gradesMobile
+          display: flex
+          gap: 0
+          &_item
+            font-size: 1.2rem
+      &_right
+        font-size: 1.4rem
+        line-height: inherit
+        width: 100%
+    &__wrapper
+      &_box
+        width: 23rem
+@media (max-width: 770px)
+  .grade
+    &__wrapper
+      &_box
+        width: 20rem
+        &_title
+          font-size: 1.8rem
+        &_desc
+          font-size: 1.2rem
+
+@media (max-width: 676px)
+  .grade
+    &__wrapper
+      &_box
+        width: 45%
+
+@media (max-width: 526px)
+  .grade
+    &__wrapper
+      &_box
+        width: 80%
+        &_title
+          font-size: 2rem
+@media (max-width: 460px)
+  .grade
+    &__header
+      &_left
+        &_gradesMobile
+          background: none
+          gap: 2rem
+
+        &_grades
+          background: none
+          padding: 0
+          &_item
+            padding: 0
+            font-size: 1.4rem
+
+@media (max-width: 460px)
+  .grade
+    &__header
+      &_left
+        &_title
+          font-size: 1.8rem
+        &_grades
+          &_item
+            padding: 0
+            font-size: 1.2rem
+      &_right
+        font-size: 1.3rem

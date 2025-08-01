@@ -1,0 +1,205 @@
+@import "app/styles/abstracts/variables"
+
+.curriculum
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  gap: 8rem
+
+  &__image
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 4rem
+    width: 50rem
+
+
+    .image
+      width: 51rem
+      height: 51rem
+
+    .info
+      background: #F3F3F3
+      padding: 2.4rem 2rem 2.4rem 1.5rem
+      display: flex
+      align-items: center
+      gap: 1.7rem
+      border-radius: 1.2rem
+
+      &__avatar
+        background: #CAA77F
+        color: #FFF
+        height: fit-content
+        border-radius: .6rem
+        padding: .12rem 1.34rem .52rem 1.34rem
+        font-size: 4rem
+
+      &__text
+        font-size: 1.6rem
+        color: #0E0E0F
+
+  &__container
+    display: flex
+    flex-direction: column
+    gap: 4rem
+    width: 92rem
+
+    .header
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      gap: 2rem
+
+      &__subTitle
+        color: #CAA77F
+        font-size: 1.6rem
+
+      &__title
+        color: #072E92
+        font-size: 4rem
+
+      &__desc
+        font-size: 2rem
+        color: #7F8490
+
+    .cards
+      display: flex
+      flex-direction: column
+      gap: 2rem
+
+      &__item
+        width: 72rem
+        height: 13rem
+        padding: .9rem 3rem .9rem .8rem
+        display: flex
+        gap: 1.5rem
+        border-radius: 1rem
+
+        .avatar
+          width: 5rem
+          height: 5rem
+          display: flex
+          justify-content: center
+          align-items: center
+          background: $newSchool-bg
+          border-radius: 50%
+
+          i
+            font-size: 2.4rem
+            color: #FFFFFF
+
+        .info
+          display: flex
+          flex-direction: column
+          justify-content: space-around
+          width: 90%
+
+          &__title
+            color: $newSchool-bg
+            font-size: 1.8rem
+            font-weight: 700
+
+          &__desc
+            font-size: 1.6rem
+            font-weight: 400
+            color: #7F8490
+.invisible
+  display: none
+@media (max-width: 1920px)
+  .curriculum
+    justify-content: space-between
+    &__image
+      width: 35%
+    &__container
+      width: 50%
+@media (max-width: 1452px)
+  .curriculum
+    .header
+      &__title
+        font-size: 2.5rem
+
+      &__desc
+        width: 100%
+
+    .cards
+      width: 100%
+
+      &__item
+        width: 100% !important
+
+@media (max-width: 1250px)
+  .curriculum
+    gap: 4rem
+
+    &__image
+      width: 44%
+
+    &__container
+      .header
+      &__title
+        font-size: 2rem
+
+      &__desc
+        font-size: 1.6rem
+
+    .info
+      justify-content: center !important
+      gap: 1rem !important
+
+      &__title
+        font-size: 1.6rem!important
+
+      &__desc
+        font-size: 1.5rem !important
+
+@media (max-width: 1000px)
+  .curriculum
+    align-items: flex-start
+    overflow: hidden
+
+
+    .info
+      &__title
+        font-size: 1.4rem !important
+      &__desc
+        font-size: 1.3rem !important
+  .image
+    width: 40rem!important
+    height: 40rem!important
+  .info
+    &__text
+      font-size: 1.4rem !important
+
+  .header
+    &__title
+      font-size: 2rem
+    &__desc
+      font-size: 1.6rem!important
+@media (max-width: 820px)
+
+
+  .invisible
+    display: flex!important
+    &  > .header
+      display: flex!important
+  .header
+    display: none!important
+  .curriculum
+    flex-direction: column
+
+
+    &__container
+      width: 100%
+    &__image
+      width: 100%!important
+      flex-direction: column-reverse!important
+      & > img
+        width: 100%!important
+        height: 30rem!important
+  .avatar
+    width: 5.5rem!important
+
+@media (max-width: 500px)
+  .cards
+    &__item
+      height: fit-content!important

@@ -1,0 +1,115 @@
+@import "app/styles/abstracts/variables"
+
+.fileDownload
+  width: 100%
+  padding: 4rem 0
+  display: flex
+  flex-direction: column
+  gap: 5.5rem
+  &__header
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 9rem
+    .title
+      font-size: 4rem
+      display: flex
+      flex-direction: column
+      &__inner
+        width: fit-content
+        background: $newSchool-bg
+        color: #fff
+        padding: 1.5rem 1.8rem 1.5rem .9rem
+        border-radius: 1rem
+    .subTitle
+      font-size: 2.4rem
+      color: #878C91
+  &__container
+    display: flex
+    justify-content: space-between
+    gap: 2rem
+    .card
+      width: 41.5rem
+      border-radius: .6rem
+      display: flex
+      flex-direction: column
+      gap: 1.8rem
+      padding: 2.4rem
+      border: 1px solid var(--Grays-Gray-4, #D1D1D6)
+      &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .title
+          font-size: 2rem
+          color: #344055
+        .avatar
+          width: 6.8rem
+          height: 6.8rem
+          border-radius: 50%
+          display: flex
+          justify-content: center
+          align-items: center
+      &__desc
+        color: #79808A
+        font-size: 1.6rem
+      &__footer
+        display: flex
+        flex-direction: column
+        gap: .4rem
+        .info
+          display: flex
+          justify-content: space-between
+          align-items: flex-end
+          &__inner
+            color: #072E92
+            font-size: 1.6rem
+          &__percent
+            font-size: 2rem
+            color: #5B6776
+        .line
+          height: 1rem
+          width: 100%
+          border-radius: .6rem
+          background: #F7F8FD
+          &__percent
+            background: #072E92
+            height: 1rem
+            border-radius: .6rem
+
+@media (min-width: 1920px)
+  .fileDownload
+    width: 150rem
+
+
+
+
+@media (max-width: 430px)
+  .fileDownload
+    &__header
+      flex-direction: column
+      justify-content: normal
+      align-items: normal
+      gap: 1.5rem
+      .title
+        font-size: 2.2rem
+        &__inner
+          padding: .8rem .9rem .8rem .5rem
+      .subTitle
+        font-size: 1.4rem
+    &__container
+      flex-direction: column
+      .card
+        width: 38rem
+
+@media (max-width: 380px)
+  .fileDownload
+    &__container
+      .card
+        width: 33rem
+        &__header
+          .avatar
+            width: 5.5rem
+            height: 5.5rem
+

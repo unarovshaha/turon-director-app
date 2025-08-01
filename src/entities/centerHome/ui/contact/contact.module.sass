@@ -1,0 +1,310 @@
+@import "app/styles/abstracts/mixins"
+
+
+.contact
+  padding: 5rem 0 0 0
+  background-color: white
+  box-shadow: 2px 0 5px 0
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    gap: 4rem
+    .hamburger
+      display: none
+  &__branches
+    width: 15%
+    display: flex
+    flex-direction: column
+    gap: 5rem
+
+    h2
+      color: #0EA5E9
+      font-size: 3rem
+      text-align: center
+      width: 100%
+
+      &:after
+        content: ""
+        position: relative
+        width: 100%
+        height: 2px
+        background-color: #0EA5E9
+        display: block
+        top: 2rem
+
+    ul
+      display: flex
+      flex-direction: column
+      gap: 1.5rem
+      list-style: none
+      padding-left: 2rem
+
+      li
+        cursor: pointer
+        font-size: 2rem
+        gap: 2rem
+        display: flex
+        align-items: center
+        transition: .3s all
+        text-transform: capitalize
+        .icon
+          font-size: 15px
+          //background: #7F7F7F
+          padding: 5px
+          border-radius: 5px
+          //color: white
+          @include btn-active
+        &.active
+          transform: scale(1.2)
+          color: #0EA5E9
+          padding-left: 3rem
+
+
+  &__locations
+    width: 60%
+    padding: 10px 0
+    display: flex
+    border-radius: 5px
+    flex-direction: column
+    gap: 5rem
+
+    &_info
+      display: flex
+      align-items: center
+      gap: 5rem
+      position: absolute
+      background-color: white
+      padding: 2rem
+
+      width: 100%
+      justify-content: space-evenly
+      box-shadow: 0 0 5px 0
+
+    &_title
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 3rem
+      color: #7F7F7F
+      margin-bottom: 5px
+    .contact__registerBtn
+      display: none
+    &_netWorks
+      display: flex
+      justify-content: space-evenly
+      color: #0EA5E9
+
+      div
+        font-size: 2rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 2rem
+        text-transform: capitalize
+        cursor: pointer
+
+        i
+          transition: .5s all
+          font-size: 4rem
+
+        &:hover i
+          color: #1A2D60
+
+    &_maps
+      width: 100%
+      position: relative
+
+      iframe
+        width: 100%
+        height: 50rem
+
+    &__box
+      &_info, &_locations
+        text-transform: capitalize
+
+        h2
+          color: #7F7F7F
+          font-size: 2.2rem
+
+        i
+          margin-top: 10px
+          font-size: 1.3rem
+          color: #0EA5E9
+
+        span
+          color: #0EA5E9
+          font-size: 1.5rem
+
+  &__register
+    display: flex
+    flex-direction: column
+
+    align-items: center
+    //width: 20%
+    gap: 5rem
+    &_header
+      display: flex
+      justify-content: center
+      img
+        width: 80%
+    &_form
+      form
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 2rem
+        .homeRegisterBtn
+          width: 15rem
+          height: 4rem
+          font-size: 1.4rem
+
+
+
+
+@media (max-width: 1800px)
+  .contact
+    &__locations
+      width: 55%
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1500px)
+  .contact
+    &__wrapper
+      gap: 3rem
+    &__branches
+      width: 10%
+      h2
+        font-size: 2.5rem
+      &_name
+        ul
+          li
+            font-size: 1.8rem
+    &__locations
+      width: 55%
+    &__register
+      width: 30%
+      &_header
+        img
+          width: 70%
+
+
+
+
+@media (max-width: 1340px)
+  .contact
+    &__locations
+      width: 50%
+
+@media (max-width: 1100px)
+  .contact
+    position: relative
+    &__wrapper
+      justify-content: center
+      flex-direction: column-reverse
+      align-items: center
+      .hamburger
+        display: flex
+        align-self: flex-start
+        padding-left: 2rem
+        font-size: 2.5rem
+    &__branches
+      justify-content: center
+      left: -300%
+      position: absolute
+      transition: .6s all
+      h2
+        color: white
+      li
+        color: white
+    .branches_active
+      //display: flex
+      padding: 5rem
+      background-color: rgba(30, 30, 30, 0.43)
+      width: 100%
+      height: 100%
+      top: 0
+      z-index: 100
+      left: 0
+      backdrop-filter: blur(5px)
+    &__locations
+      width: 80%
+      &_header
+        display: flex
+        padding: 0 2rem
+        align-items: center
+        justify-content: space-between
+        .contact__registerBtn
+          display: flex
+          align-self: flex-end
+@media (max-width: 850px)
+  .contact
+    position: relative
+
+    &__wrapper
+      flex-direction: column-reverse
+      align-items: center
+
+      gap: 5rem
+      .hamburger
+        display: flex
+        align-self: flex-start
+        padding-left: 2rem
+        font-size: 2.5rem
+    &__branches
+      justify-content: center
+      left: -300%
+      position: absolute
+      transition: .6s all
+      h2
+        color: white
+      li
+        color: white
+    .branches_active
+      //display: flex
+      padding: 5rem
+      background-color: rgba(30, 30, 30, 0.43)
+      width: 100%
+      height: 100%
+      top: 0
+      z-index: 100
+      left: 0
+      backdrop-filter: blur(5px)
+
+    &__locations
+      width: 100%
+      &_header
+        justify-content: center
+      &_netWorks
+        div
+          font-size: 1.5rem
+          i
+            font-size: 3.5rem
+      &_info
+        align-items: center
+        justify-content: center
+        left: 0
+        top: 0
+        border-radius: 0
+        width: 100%
+        i
+          font-size: 1rem
+        span
+          font-size: 1.2rem
+      .contact__registerBtn
+        display: none
+    &__register
+      display: flex
+      &_header
+        img
+          width: 18rem

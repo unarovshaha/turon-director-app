@@ -1,0 +1,113 @@
+@import "app/styles/abstracts/variables"
+
+.mission
+  width: 100%
+  padding: 5rem 0
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  &__header
+    padding: 1.6rem 3.2rem
+    border-radius: 2rem
+    background: $newSchool-box-bg
+    gap: 3.2rem
+    display: flex
+    align-items: center
+    position: relative
+    .image
+      height: 28.5rem
+      width: 43rem
+    .title
+      color: #010205
+      font-size: 4.5rem
+      font-weight: 600
+    .btn
+      position: absolute
+      bottom: -2rem
+      right: -2rem
+      padding: .4rem 3.5rem 1.9rem 2rem
+      border-radius: 2rem
+      background: #fff
+      &__inner
+        width: 10rem
+        height: 10rem
+        font-size: 5.8rem
+        padding-top: 1rem
+        border-radius: 50%
+        font-weight: 600
+        background: $newSchool-bg
+        color: white
+        display: flex
+        justify-content: center
+  &__container
+    display: flex
+    gap: 10rem
+    .info
+      display: flex
+      flex-direction: column
+      gap: 1.5rem
+      &__header
+        font-size: 4rem
+        font-weight: 700
+      &__desc
+        font-weight: 400
+        font-size: 2rem
+    .task
+      padding: 1.5rem 5rem 0 5rem
+      background: $newSchool-bg
+      border-radius: 2rem
+      color: #fff
+      display: flex
+      flex-direction: column
+      gap: 2rem
+      &__title
+        font-size: 3.2rem
+        font-weight: 500
+      &__desc
+        font-size: 2rem
+        font-weight: 400
+
+
+@media (min-width: 1920px)
+  .mission
+    width: 150rem
+
+
+
+
+@media (max-width: 430px)
+  .mission
+    gap: 2.5rem
+    &__header
+      padding: .5rem .95rem
+      gap: 1rem
+      .image
+        width: 12.5rem
+        height: 8.4rem
+      .title
+        font-size: 1.4rem
+        font-weight: 600
+        color: #010205
+      .btn
+        display: none
+    &__container
+      flex-direction: column
+      gap: 2.5rem
+      .info
+        &__header
+          font-size: 2rem
+          font-weight: 700
+        &__desc
+          font-weight: 400
+          font-size: 1.2rem
+        &__image
+          width: 100%
+      .task
+        gap: .6rem
+        padding: 1.2rem 3.3rem
+        &__title
+          font-size: 2rem
+        &__desc
+          font-size: 1.2rem
+
+

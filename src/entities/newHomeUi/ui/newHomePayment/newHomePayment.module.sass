@@ -1,0 +1,117 @@
+@import "app/styles/abstracts/variables"
+
+.payment
+  width: 100%
+  padding-bottom: 4rem
+  display: flex
+  flex-direction: column
+  gap: 2rem
+  &__header
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 9rem
+    .title
+      font-size: 4rem
+      display: flex
+      flex-direction: column
+      &__inner
+        width: fit-content
+        background: $newSchool-bg
+        color: #fff
+        padding: 1.5rem 1.8rem 1.5rem .9rem
+        border-radius: 1rem
+    .subTitle
+      font-size: 2rem
+      color: #878C91
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 2rem
+    .card
+      border: 1px solid rgba(229, 229, 234, 1)
+      //width: 45rem
+      padding: 5rem
+      height: fit-content
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      gap: 3.2rem
+      border-radius: 10px
+      .btn
+        width: 30rem !important
+        height: 5.6rem !important
+        border-radius: .6rem !important
+      .title
+        display: flex
+        flex-direction: column
+        gap: 1.5rem
+        &__main
+          color: $newSchool-bg
+          font-size: 4rem
+          font-weight: 700
+          //display: flex
+          //align-items: flex-end
+          gap: .3rem
+          .inner
+            font-size: 1.6rem
+            font-weight: 600
+            color: #656565
+        &__sub
+          font-size: 2.1rem
+          font-weight: 600
+      .list
+        display: flex
+        flex-direction: column
+        gap: 3.2rem
+        list-style: none
+        li
+          color: #454545
+          font-size: 1.6rem
+          font-weight: 600
+        li:before
+          content: '✓'
+          margin-right: 1rem
+          color: $newSchool-bg
+        &.active
+          gap: 4rem
+          li:before
+            color: #FFf
+          li
+            color: #FFF
+
+@media (min-width: 1920px)
+  .payment
+    width: 150rem
+
+
+@media (max-width: 430px)
+  .payment
+    &__header
+      flex-direction: column
+      justify-content: normal
+      align-items: normal
+      gap: 1.5rem
+      .title
+        font-size: 2.2rem
+        &__inner
+          padding: .8rem .9rem .8rem .5rem
+      .subTitle
+        font-size: 1.4rem
+    &__container
+      flex-direction: column
+      .card
+        padding: 3rem
+        .title
+          &__main
+            font-size: 3rem
+
+@media (max-width: 380px)
+  .payment
+    &__container
+      .card
+        padding: 2rem
+
+

@@ -1,0 +1,51 @@
+@import "app/styles/abstracts/variables"
+
+.questions
+  width: 100%
+  padding-top: 4rem
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  &__header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .title
+      font-size: 4rem
+      font-weight: 600
+      color: $newSchool-bg
+    .subTitle
+      font-weight: 500
+      font-size: 2rem
+      color: #000000B2
+  &__container
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+    .list
+      padding: 1rem 3rem
+      list-style: circle
+      display: flex
+      flex-direction: column
+      gap: .2rem
+      font-size: 1.6rem
+
+
+@media (min-width: 1920px)
+  .questions
+    width: 150rem
+
+
+@media (max-width: 430px)
+  .questions
+    &__header
+      flex-direction: column
+      align-items: normal
+      gap: 1.5rem
+      .title
+        font-size: 2rem
+      .subTitle
+        font-size: 1.4rem
+
+
+

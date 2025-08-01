@@ -1,0 +1,94 @@
+@import "app/styles/abstracts/variables"
+
+.fileDownload
+  width: 100%
+  padding: 4rem 0
+  display: flex
+  flex-direction: column
+  gap: 5.5rem
+  &__header
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 9rem
+    .title
+      font-size: 4rem
+      &__inner
+        width: fit-content
+        background: $newSchool-bg
+        color: #fff
+        padding: .4rem
+        border-radius: 1rem
+    .subTitle
+      font-size: 2.4rem
+      color: #878C91
+  &__container
+    display: flex
+    justify-content: space-between
+    gap: 2rem
+    .card
+      padding: 3.2rem
+      border-radius: 1.6rem
+      display: flex
+      flex-direction: column
+      gap: 3rem
+      border: 1px solid #D1D1D6
+      box-shadow: 0 4px 4px -4px #0C0C0D0D, 0 16px 32px -4px #0C0C0D1A
+      &__text
+        font-size: 1.6rem
+        font-weight: 400
+      &__profile
+        display: flex
+        align-items: flex-end
+        gap: 1.6rem
+        .avatar
+          width: 6.4rem
+          height: 6.4rem
+          border-radius: 50%
+        .info
+          display: flex
+          flex-direction: column
+          gap: .5rem
+          &__title
+            color: #111827
+            font-size: 2rem
+            font-weight: 600
+          &__desc
+            color: #9CA3AF
+            font-size: 1.6rem
+            font-weight: 500
+
+@media (min-width: 1920px)
+  .fileDownload
+    width: 150rem
+
+
+@media (max-width: 430px)
+  .fileDownload
+    &__header
+      flex-direction: column
+      justify-content: normal
+      align-items: normal
+      gap: 1.5rem
+      .title
+        font-size: 2.2rem
+        &__inner
+          padding: .1rem
+          border-radius: .3rem
+      .subTitle
+        font-size: 1.4rem
+    &__container
+      flex-direction: column
+      .card
+        &__profil
+          .avatar
+            width: 5.5rem
+            height: 5.5rem
+          .info
+            &__title
+              font-size: 1.8rem
+            &__desc
+              font-size: 1.4rem
+
+

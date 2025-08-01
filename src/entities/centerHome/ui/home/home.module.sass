@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap')
+@import "app/styles/abstracts/variables"
+.home
+  background-color: #0EA5E9
+  height: 100vh
+  //height: fit-content
+  align-items: center
+  justify-content: center
+  display: flex
+  padding: 5rem
+
+  &Wrapper
+    display: flex
+    align-items: center
+    gap: 30rem
+    position: relative
+
+    justify-content: center
+  //flex-direction: column
+  //height: 50rem
+  &Texts
+    display: flex
+    flex-direction: column
+    gap: 30px
+    width: 50%
+    .icon
+      position: absolute
+      width: 75px
+      height: 75px
+      font-size: 25px
+      border-radius: 5px
+      background-color: gray
+      display: flex
+      justify-content: center
+      align-items: center
+      color: white
+      top: -100px
+
+  &Title
+    font-size: 50px
+    color: white
+    font-weight: 700
+
+  &Paragraph
+    font-size: 20px
+    color: white
+  //width: 50%
+  &Aside
+    background-color: white
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    border-radius: 10px
+    width: 50rem
+    gap: 40px
+    padding: 50px 0
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.51), inset 0 0 5px 0 #544f4f
+
+    &__title
+      font-weight: 700
+      font-size: 30px
+      color: $btn-gennis
+
+    form
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      gap: 20px
+
+      .select
+        width: 35rem
+
+      .home__input
+        width: 35rem
+
+      .buttonExtra
+        font-size: 16px
+        height: 4.5rem
+        width: 20rem
+  &__modal
+    width: fit-content
+    height: fit-content
+    padding: 2rem
+    background-color: white
+    border-radius: 10px
+
+    h1
+      margin-bottom: 2rem
+      font-size: 2.4rem
+
+    .wrapper
+      gap: 2rem
+      display: flex
+      justify-content: space-around
+      align-items: center
+
+    &_img
+      width: 450px
+      height: 400px
+      background-color: rgba(0, 0, 0, 0.4)
+      border-radius: 10px
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 100px
+
+      img
+        width: 100%
+        height: 100%
+
+    &_text
+      width: 450px
+      height: 400px
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: center
+
+      textarea
+        padding: 10px
+        font-size: 18px
+        resize: none
+
+@media (max-width: 1550px)
+  .home
+    &Title
+      font-size: 40px
+
+    &Paragraph
+      font-size: 16px
+
+    &Aside
+      form
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 20px
+
+        .select
+          width: 35rem
+
+        .buttonExtra
+          font-size: 16px
+          height: 4rem
+          width: 18rem
+
+@media (max-width: 1440px)
+  .home
+    &Wrapper
+      gap: 20rem
+
+    &Title
+      font-size: 35px
+
+    &Paragraph
+      font-size: 16px
+
+@media (max-width: 1200px)
+  .home
+    &Wrapper
+      gap: 15rem
+
+    &Title
+      font-size: 30px
+
+    &Paragraph
+      font-size: 15px
+
+    &Aside
+      form
+        gap: 18px
+
+        .buttonExtra
+          width: 17rem
+
+@media (max-width: 900px)
+  .home
+
+    &Wrapper
+      gap: 10rem
+
+      flex-direction: column
+
+    &Texts
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 80rem
+
+    &Title
+      font-size: 25px
+
+    &Paragraph
+      padding: 0 10px
+
+@media (max-width: 810px)
+  .home
+    &Title
+      font-size: 20px
+
+    &Paragraph
+      font-size: 14px
+      padding: 0 40px
+
+    &Aside
+      width: 45rem
+
+      &__title
+        font-size: 25px
+
+      form
+        gap: 15px
+
+        .buttonExtra
+          width: 15rem
+          font-size: 1.5rem
+
+@media (max-width: 770px)
+  .home
+    &Paragraph
+      text-align: center
+      width: 80rem
+      font-size: 14px
+
+
+@media (max-width: 720px)
+  .home
+    &Title
+      font-size: 18px
+
+    &Paragraph
+      //text-align: center
+      //padding: 5rem
+      font-size: 12px
+      width: 70rem
+
+@media (max-width: 650px)
+  .home
+    &Paragraph
+      //text-align: center
+      //padding: 5rem
+      font-size: 12px
+      width: 60rem
+
+    &Aside
+      width: 40rem
+
+      &__title
+        font-size: 20px
+
+      form
+        .buttonExtra
+          width: 13rem
+          font-size: 1.3rem
+
+@media (max-width: 590px)
+  .home
+    &Paragraph
+      text-align: center
+      width: 55rem
+      font-size: 12px
+
+    &Aside
+      width: 40rem
+
+      &__title
+        font-size: 18px
+
+      form
+        .buttonExtra
+          width: 12rem
+          font-size: 1.2rem
+
+@media (max-width: 490px)
+  .home
+    //align-items: flex-start
+    padding: 10rem
+
+    &Wrapper
+      gap: 5rem
+      padding: 0
+
+    &Title
+      font-size: 17px
+
+    &Paragraph
+      text-align: center
+      width: 40rem
+      font-size: 13px
+
+    &Aside
+      padding: 10px
+      width: 35rem
+
+      &__title
+        margin-top: 10px
+        font-size: 18px
+
+      form
+        .home__input
+          width: 30rem !important
+
+        .select
+          width: 29rem
+
+        .buttonExtra
+          width: 10rem
+          font-size: 1.2rem

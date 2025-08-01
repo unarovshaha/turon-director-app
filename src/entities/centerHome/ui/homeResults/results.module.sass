@@ -1,0 +1,317 @@
+.results
+  padding: 30px 0
+  //height: 50vh
+  height: fit-content
+  margin-bottom: 5rem
+  //.slickVertical
+  //  div
+  //    display: flex
+  //    justify-content: center
+  &__box
+    box-shadow: 0 0 5px 0
+    width: 50rem !important
+    border-radius: 10px
+    transition: 1s all
+    margin: 20px
+    height: 40rem
+
+    &_header
+      background-image: linear-gradient(90deg, #06b5ff, #349cca)
+      border-radius: 10px 10px 0 0
+      display: flex
+      flex-direction: column
+      height: 15rem
+      width: 100%
+      margin-bottom: 10px
+    &_info
+      align-self: flex-end
+      background-color: #fff500
+      border-radius: 3px
+      font-size: 18px
+      height: 45px
+      margin: 20px
+      padding: 10px
+      display: flex
+      justify-content: center
+      align-items: center
+
+      width: 105px
+
+    &_images
+      padding: 0 20px
+      height: 10rem
+      display: flex
+      justify-content: space-between
+      //gap: 10rem
+      &_profile
+        top: -10rem
+        position: relative
+        border-radius: 5px
+
+        height: 20rem
+
+        img
+          height: 100%
+          width: 100%
+
+      &_results
+        top: -6.5rem
+        position: relative
+
+        img
+          width: 13rem
+          height: 13rem
+
+    &_studentsInfo
+      display: flex
+      flex-direction: column
+      gap: 20px
+      padding: 2rem
+
+      &_teacher, &_student
+        font-size: 20px
+        color: #0EA5E9
+        text-transform: capitalize
+        gap: 10px
+        display: flex
+
+      &_student
+        color: black
+
+@media (max-width: 1650px)
+  .results
+    &__box
+      width: 48rem !important
+
+@media (max-width: 1580px)
+  .results
+    &__box
+      width: 45rem !important
+
+      &_images
+        &_profile
+          img
+            width: 80%
+
+        &_results
+          top: -5.5rem
+
+          img
+            width: 10rem
+            height: 10rem
+
+@media (max-width: 1450px)
+  .results
+    &__box
+      width: 40rem !important
+
+      &_images
+        &_profile
+          img
+            width: 80%
+
+        &_results
+          top: -5.5rem
+
+          img
+            width: 10rem
+            height: 10rem
+
+@media (max-width: 1320px)
+  .results
+    &__box
+      width: 38rem !important
+
+      &_images
+        &_profile
+          img
+            width: 80%
+
+        &_results
+          top: -5.5rem
+
+          img
+            width: 10rem
+            height: 10rem
+
+@media (max-width: 1250px)
+  .results
+    &__box
+      width: 35rem !important
+
+      &_images
+        &_profile
+          img
+            width: 80%
+
+        &_results
+          top: -5.5rem
+
+          img
+            width: 10rem
+            height: 10rem
+
+@media (max-width: 1150px)
+  .results
+    &__box
+      width: 30rem !important
+      height: 35rem !important
+
+      &_images
+        &_profile
+          img
+            width: 80%
+
+        &_results
+          top: -5.5rem
+
+          img
+            width: 10rem
+            height: 10rem
+
+@media (max-width: 1050px)
+  .results
+    &__header
+      height: 300px
+
+    &__box
+      width: 26rem !important
+      height: 35rem !important
+
+      &_header
+        height: 13rem
+
+      &_images
+        &_profile
+          img
+            width: 80%
+
+        &_results
+          top: -5.5rem
+
+          img
+            width: 8rem
+            height: 8rem
+
+@media (max-width: 900px)
+  .results
+
+    &__box
+      width: 24rem !important
+      height: 30rem !important
+
+      &_info
+        font-size: 16px
+        height: 35px
+        width: 90px
+        display: flex
+        justify-content: center
+        align-items: center
+
+      &_header
+        height: 11rem
+
+      &_studentsInfo
+        display: flex
+        flex-direction: column
+        gap: 20px
+        padding: 0.2rem 1rem
+
+        &_teacher, &_student
+          font-size: 18px
+          text-transform: capitalize
+          gap: 10px
+          display: flex
+
+      &_images
+        &_profile
+          img
+            width: 80%
+
+        &_results
+          top: -3.5rem
+
+          img
+            width: 8rem
+            height: 8rem
+
+@media (max-width: 830px)
+  .results
+    &__box
+      width: 30rem !important
+      height: 30rem !important
+
+      &_info
+        font-size: 16px
+        height: 35px
+        width: 90px
+        display: flex
+        justify-content: center
+        align-items: center
+
+      &_header
+        height: 11rem
+
+      &_studentsInfo
+        display: flex
+        flex-direction: column
+        gap: 20px
+        padding: 0.5rem 1rem
+
+        &_teacher, &_student
+          font-size: 18px
+          text-transform: capitalize
+          gap: 10px
+          display: flex
+
+      &_images
+        gap: 10px
+
+        &_profile
+          top: -9rem
+
+          img
+            width: 80%
+
+        &_results
+          top: -4rem
+
+          img
+
+            width: 8rem
+            height: 8rem
+
+
+@media (max-width: 760px)
+  .results
+    &__box
+      width: 28rem !important
+      height: 30rem !important
+
+@media (max-width: 700px)
+  .results
+    &__box
+      width: 25rem !important
+      height: 30rem !important
+      &_header
+        margin-bottom: 10px
+@media (max-width: 550px)
+  .results
+    &__box
+
+      width: 25rem !important
+      height: 30rem !important
+
+@media (max-width: 500px)
+  .results
+    &__box
+      width: 39rem !important
+      height: 30rem !important
+@media (max-width: 430px)
+  .results
+    &__box
+      width: 33rem !important
+@media (max-width: 350px)
+  .results
+    &__box
+      width: 30rem !important

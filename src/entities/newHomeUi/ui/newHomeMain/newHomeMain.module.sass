@@ -1,0 +1,582 @@
+.main
+  display: flex
+
+  gap: 2rem
+  justify-content: space-between
+  width: 100%
+  &__left
+    display: flex
+    flex-direction: column
+    gap: 2rem
+
+    &_title
+      font-family: "Montserrat", sans-serif
+      font-size: 4.8rem
+      font-weight: 600
+      display: flex
+      flex-direction: column
+      gap: 1rem
+
+      & > span
+        width: fit-content
+        color: white
+        background: rgba(7, 46, 146, 1)
+        padding: 1.1rem 2rem
+        border-radius: 10px
+        font-size: 4rem
+
+    &_desc
+      color: rgba(135, 140, 145, 1)
+      font-weight: 500
+      font-family: "Montserrat", sans-serif
+      font-size: 1.6rem
+      width: 60rem
+
+    &_link
+      display: flex
+      align-items: center
+      gap: 5rem
+
+      &_info
+        color: rgba(202, 167, 127, 1)
+        font-weight: 600
+        font-family: "Montserrat", sans-serif
+        font-size: 1.6rem
+        cursor: pointer
+        text-decoration: underline
+      &  > button
+        justify-content: center
+        gap: 1rem
+    &_footer
+      display: flex
+      //flex-direction: column
+      margin-top: 7rem
+      gap: 5rem
+
+      &_number
+        display: flex
+        flex-direction: column
+        //width: 8rem
+        & > h1
+
+          color: rgba(7, 46, 146, 1)
+          font-weight: 700
+          font-family: "Montserrat", sans-serif
+          font-size: 4.8rem
+
+        & > span
+          color: rgba(135, 140, 145, 1)
+          font-weight: 500
+          font-family: "Montserrat", sans-serif
+          font-size: 1.6rem
+          width: 180px
+
+  &__right
+    width: 63rem
+    //border: 1px solid
+    display: flex
+    flex-direction: column
+    gap: 2rem
+
+    &_header
+      display: flex
+      align-items: center
+      gap: 2rem
+
+      &_img
+        width: 100%
+        height: 364px
+
+        & > img
+          width: 100%
+          height: 100%
+
+      &_box
+        width: 259px
+        height: 29rem
+        background: rgba(240, 240, 240, 1)
+        border-radius: 20px
+        display: flex
+        padding-top: 4.2rem
+        flex-direction: column
+        align-items: center
+
+        &_text
+          font-size: 2.9rem
+          font-family: "Montserrat", sans-serif
+          font-weight: 500
+          color: rgba(1, 2, 5, 1)
+          position: relative
+
+        &_line
+          position: absolute
+          background: rgba(202, 167, 127, 1)
+          width: 22rem
+          height: .7rem
+          bottom: -5rem
+          left: 50%
+          transform: translateX(-50%)
+
+    &_form
+      background: rgba(7, 46, 146, 1)
+      width: 100%
+      height: 21.6rem
+      border-radius: 20px
+      padding: 2rem 3rem
+      position: relative
+
+      &_form
+        display: flex
+        //flex-direction: column
+        gap: 3rem
+
+      &_title
+        text-align: center
+        font-size: 2rem
+        font-family: "Montserrat", sans-serif
+        font-weight: 500
+        color: white
+
+      &_input
+        width: 25rem !important
+        height: 2.5rem !important
+        border: none !important
+        outline: none !important
+        background: none !important
+        border-bottom: 1px solid white !important
+        border-radius: 0 !important
+        color: white !important
+        padding: 2rem 1rem !important
+
+        &::placeholder
+          color: white !important
+
+      &_textarea
+        //height: 8.7rem !important
+        border: none !important
+        background: none !important
+        width: 25rem !important
+        outline: none !important
+        border-radius: 0 !important
+        border-bottom: 1px solid white !important
+        color: white !important
+
+        &::placeholder
+          color: white !important
+
+      &_robo
+        position: absolute
+        bottom: -4rem
+        right: -5rem
+
+    &_disappear
+      display: none
+
+
+.pulse_container
+  //position: absolute
+  width: 100px
+  height: 100px
+
+.pulse_ring
+  position: absolute
+  width: 70%
+  height: 70%
+  border-radius: 50%
+  background: rgba(193, 154, 107, 0.4)
+  /* to‘lqin rangi */
+  animation: pulse 2s infinite
+  z-index: 1
+
+.pulse_ring:nth-child(2)
+  animation-delay: 0.4s
+
+.pulse_ring:nth-child(3)
+  animation-delay: 0.8s
+
+.icon
+  position: absolute
+  width: 70%
+  height: 70%
+  font-size: 30px
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 2
+  background-color: #d2a679
+  border-radius: 50%
+@media (min-width: 1905px)
+  .main
+    width: 150rem
+    gap: 26rem
+@keyframes pulse
+  0%
+    transform: scale(0.8)
+    opacity: 1
+  100%
+    transform: scale(2.2)
+    opacity: 0
+
+@media (max-width: 1920px)
+  .main
+    width: 100%
+    justify-content: space-between
+@media (max-width: 1500px)
+  .main
+    &__right
+      width: 50rem
+
+      &_header
+        &_img
+          height: 300px
+
+@media (max-width: 1320px)
+  .main
+
+    &__left
+      &_title
+        font-size: 3.5rem
+
+        & > span
+          font-size: 3rem
+
+      &_desc
+        width: 80%
+
+      &_footer
+        gap: 2rem
+
+        &_number
+          & > h1
+            font-size: 3.5rem
+
+          & > span
+            font-size: 1.2rem
+            width: 80%
+
+    &__right
+      &_form
+        &_input
+          width: 20rem !important
+
+        &_textarea
+          width: 20rem !important
+
+@media (max-width: 1170px)
+  .main
+    &__left
+      &_title
+        font-size: 3rem
+
+        & > span
+          font-size: 2.5rem
+
+      &_desc
+        width: 90%
+
+      &_link
+        gap: 2rem
+
+        & > button
+          width: 30rem
+
+      &_footer
+        gap: 2rem
+        margin-top: 3rem
+
+        &_number
+          & > h1
+            font-size: 3rem
+
+          & > span
+            font-size: 1.2rem
+            width: 90%
+
+    &__right
+      &_header
+        &_img
+          height: 250px
+
+      &_form
+        &_input
+          width: 18rem !important
+
+        &_textarea
+          width: 18rem !important
+
+@media (max-width: 1100px)
+  .main
+    &__left
+      &_title
+        font-size: 2.5rem
+
+        & > span
+          font-size: 2rem
+
+      &_desc
+        width: 80%
+
+      &_link
+        gap: 2rem
+
+        & > button
+          width: 25rem
+          gap: 1rem
+          font-size: 1.4rem
+
+      &_footer
+        gap: 2rem
+        margin-top: 3rem
+
+        &_number
+          & > h1
+            font-size: 2.5rem
+
+          & > span
+            font-size: 1rem
+            width: 70%
+
+    &__right
+      width: 35rem
+
+      &_header
+        &_img
+          height: 200px
+
+      &_form
+        padding: 2rem 1rem
+
+        &_input, &_textarea
+          font-size: 1.4rem !important
+          width: 15rem !important
+
+@media (max-width: 1050px)
+  .main
+    padding-top: 2.5rem
+    //flex-direction: column
+
+    gap: 1rem
+    &__left
+      width: 45%
+      &_title
+        //flex-direction: column-reverse
+
+      &_disappear
+        //display: none
+
+      &_desc
+        width: 100%
+
+    &__right
+      width: 40%
+
+
+      &_wrapper
+        width: 100%
+
+      &_header
+        &_img
+          //display: none
+
+      &_form
+        &_input, &_textarea
+          width: 100% !important
+
+      &_disappear
+        //display: flex
+
+      &_style
+        width: 100% !important
+@media (max-width: 1006px)
+  .main
+    flex-direction: column
+    &__left
+      width: 100%
+      &_disappear
+        display: none
+    &__right
+      width: 100%
+      flex-direction: row-reverse
+
+      align-items: center
+      justify-content: center
+      &_header
+        width: 50%
+        &_img
+          & > img
+            height: 25rem
+      &_form
+        width: 50%
+        height: 23rem
+        margin-top: 4rem
+        //display: none
+      //&_disappear
+      //  display: flex
+@media (max-width: 746px)
+  .main
+    &__right
+      flex-direction: column
+      &_header
+        display: none
+      &_form
+        width: 100%
+      &_disappear
+        display: flex
+@media (max-width: 700px)
+  .main
+    &__right
+      &_wrapper
+        width: 100%
+
+      &_form
+        height: fit-content
+
+        &_form
+          flex-direction: column
+          gap: 0
+
+        &_input, &_textarea
+          width: 100% !important
+
+@media (max-width: 550px)
+  .main
+    &__left
+      &_title
+        font-size: 2rem
+
+        & > span
+          font-size: 1.5rem
+
+      &_desc
+        font-size: 1.3rem
+
+      &_link
+        &_info
+          font-size: 1.4rem
+
+        & > button
+          font-size: 1.2rem
+          width: fit-content
+          padding: 0 2rem
+
+      &_footer
+        &_number
+          & > h1
+            font-size: 2.2rem
+
+          & > span
+            width: 100%
+    &__right
+      &_form
+        &_robo
+          bottom: -4rem
+  .icon
+    width: 50%
+    height: 50%
+    &  > img
+      width: 50%
+      height: 50%
+  .pulse_ring
+    width: 50%
+    height: 50%
+
+@media (max-width: 480px)
+  .main
+    &__left
+      &_title
+        font-size: 2rem
+
+        & > span
+          font-size: 2rem
+          padding: 1rem
+
+      &_desc
+        font-size: 1.2rem
+
+      &_link
+        &_info
+          font-size: 1.2rem
+
+        & > button
+          font-size: 1.2rem
+          width: fit-content
+          padding: 0 2rem
+
+      &_footer
+        &_number
+          & > h1
+            font-size: 2rem
+
+          & > span
+            width: 100%
+    &__right
+      &_form
+        &_robo
+          bottom: -4rem
+
+@media (max-width: 380px)
+  .main
+    &__left
+      &_title
+        font-size: 2rem
+
+        & > span
+          font-size: 2rem
+          padding: 1rem
+
+      &_desc
+        font-size: 1.2rem
+
+      &_link
+        &_info
+          font-size: 1rem
+
+        & > button
+          font-size: 1.1rem
+          width: fit-content
+          padding: 0 1rem
+
+      &_footer
+        &_number
+          & > h1
+            font-size: 2rem
+
+          & > span
+            width: 100%
+    &__right
+      &_form
+        &_robo
+          bottom: -4rem
+@media (max-width: 300px)
+  .main
+    &__left
+      &_title
+        font-size: 1.8rem
+
+        & > span
+          font-size: 1.8rem
+          padding: 1rem
+
+      &_desc
+        font-size: 1rem
+
+      &_link
+        &_info
+          font-size: 1rem
+
+        & > button
+          font-size: 1rem
+          width: fit-content
+          padding: 0 1rem
+
+      &_footer
+        &_number
+          & > h1
+            font-size: 2rem
+
+          & > span
+            width: 100%
+    &__right
+      &_form
+        &_robo
+          bottom: -4rem

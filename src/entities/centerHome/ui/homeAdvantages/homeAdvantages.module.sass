@@ -1,0 +1,121 @@
+.advantages
+  padding: 30px
+  height: fit-content
+
+  &__wrapper
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    gap: 5rem
+  &__modal
+    width: fit-content
+    height: fit-content
+    padding: 2rem
+    background-color: white
+    border-radius: 10px
+    gap: 2rem
+
+    .wrapper
+      display: flex
+      flex-direction: column
+      gap: 2rem
+
+      &__container
+        display: flex
+        gap: 2rem
+
+        &_item
+          width: 450px
+          height: 400px
+          display: flex
+          flex-direction: column
+          justify-content: space-around
+          align-items: center
+
+          textarea
+            resize: none
+            height: 250px
+            border: 2px solid #626262
+
+          &:nth-child(2)
+            border: 1px solid black
+
+            img
+              width: 100%
+              height: 100%
+
+            .image
+              gap: 2rem
+              display: flex
+              flex-direction: column
+              justify-content: space-evenly
+              align-items: center
+
+              i
+
+                color: black
+  &__box
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 40rem
+
+    h2
+      color: #0EA5E9
+      font-size: 2rem
+
+    &_item
+      //box-shadow: 0 0 5px 0 #00abf6
+      border: 3px solid #0EA5E9
+      //padding: 20px
+      margin-top: 10px
+      width: 40rem
+      gap: 2rem
+      display: flex
+      align-items: center
+      flex-direction: column
+      //border-radius: 10px
+      position: relative
+      .icon
+        position: absolute
+        font-size: 15px
+        color: rgba(0, 0, 0, 0.4)
+        right: 1.5rem
+        top: 15px
+        z-index: 22
+        background: #7F7F7F
+        padding: 10px
+        border-radius: 5px
+        color: white
+
+    &_img
+      width: 100%
+
+      height: 30rem
+
+      img
+        //border-radius: 5px
+        width: 100%
+        object-fit: cover
+        height: 100%
+
+    &_info
+      font-size: 2rem
+      padding: 0 0 20px 20px
+      color: #7F7F7F
+      text-transform: capitalize
+
+
+@media (max-width: 500px)
+  .advantages
+    padding: 0
+
+    &__box
+      h2
+        font-size: 1.8rem
+
+      &_item
+        width: 35rem
+
+      &_info
+        font-size: 1.6rem
