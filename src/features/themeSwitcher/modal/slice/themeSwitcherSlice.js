@@ -59,39 +59,34 @@ const themeSwitcherSlice = createSlice({
                 console.log(action.payload, 'payload')
                 state.inited = true
 
-                const localSystem = JSON.parse(localStorage.getItem("selectedSystem")) // changed
+                const localSystem = JSON.parse(localStorage.getItem("selectedSystem"));
 
-
-                if (!localSystem && !localSystem?.name ) {
-
-
-
+                if (!localSystem || !localSystem?.name) {
                     state.system = {
                         id: action.payload[1]?.id,
                         name: action.payload[1]?.name
-                    }
+                    };
 
                     localStorage.setItem("selectedSystem", JSON.stringify({
                         id: action.payload[1]?.id,
                         name: action.payload[1]?.name
-                    }))
+                    }));
                 } else {
-
                     if (action.payload.some(item => item.id === +localSystem.id)) {
                         state.system = {
                             id: localSystem.id,
                             name: localSystem.name
-                        }
+                        };
                     } else {
                         state.system = {
                             id: action.payload[1]?.id,
                             name: action.payload[1]?.name
-                        }
+                        };
 
                         localStorage.setItem("selectedSystem", JSON.stringify({
                             id: action.payload[1]?.id,
                             name: action.payload[1]?.name
-                        }))
+                        }));
                     }
                 }
 
@@ -108,5 +103,5 @@ const themeSwitcherSlice = createSlice({
 
 })
 
-export default themeSwitcherSlice.reducer
+export const themeSwitcherReducer = themeSwitcherSlice.reducer
 export const {onChangeSystem,clearSystems} = themeSwitcherSlice.actions

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {userSetPermissionThunk, fetchLocationsForSystemsThunk, fetLocationsForBranchesThunk} from "./userSetPermissionThunk";
+import {userSetPermissionThunk} from "./userSetPermissionThunk";
 
 const initialState = {
     newPermission: [],

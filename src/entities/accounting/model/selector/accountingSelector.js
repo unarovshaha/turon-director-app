@@ -1,4 +1,4 @@
-import {studentSlice} from "../../index";
+
 
 export const getAccountingSelect = (state) =>
     state.accountingSlice?.pages
@@ -15,4 +15,4 @@ export const getStudentsData =(state) =>
 
 
 export const getEncashment = (state) =>
-    state.accountingSlice.encashment
+    state.accountingSlice?.encashment

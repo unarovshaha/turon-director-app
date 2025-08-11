@@ -1,0 +1,80 @@
+.main
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  gap: 3rem
+  background: #FDFDFD
+  align-items: center
+  padding: 2rem
+  &__header
+    width: 100%
+    height: 60%
+    padding: 2rem
+    display: flex
+    flex-wrap: wrap
+    gap: 6rem
+    user-select: none
+    align-items: center
+    &__card
+      width: 450px
+      padding: 2rem
+      flex-shrink: 0
+      height: 200px
+      border-radius: 3rem
+      display: flex
+      align-items: center
+      gap: 2rem
+      &__leftSide
+        width: 100%
+        display: flex
+        padding-left: 3rem
+        flex-direction: column
+        gap: 2rem
+        h1
+          font-size: 3.2rem
+          color: white
+          font-family: "Montserrat", sans-serif
+        h2
+          font-size: 2rem
+          color: white
+          letter-spacing: .1rem
+          font-family: "Montserrat", sans-serif
+      &__rightSide
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-left: 1rem
+        &__circle
+          width: 13rem
+          height: 13rem
+          border-radius: 50%
+          background: #FFFFFF
+          display: flex
+          align-items: center
+          justify-content: center
+  &__center
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 2rem
+    &__card
+      width: fit-content
+      height: 100%
+    span
+      font-size: 2rem
+      font-family: "Montserrat", sans-serif
+      div
+        font-size: 3rem
+  &__chart
+    width: 100%
+    span
+      font-size: 2rem
+
+
+
+.MuiPopper-root
+  font-size: 10rem !important

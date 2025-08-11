@@ -1,0 +1,61 @@
+import React, {useCallback, useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {fetchBranchesByLocationsThunk} from "../model/thunk/branchSwitcherThunk";
+import {onChangeBranch, onDeleteBranch, branchSwitcherReducer} from "../model/slice/branchSwitcherSlice.js";
+import {getBranches, getBranchLoading} from "../model/selector/brachSwitcherSelector";
+import {getBranch} from "../model/selector/brachSwitcherSelector";
+import {Select} from "shared/ui/select";
+
+import cls from "./BranchSwitcher.module.sass"
+import {DynamicModuleLoader} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader.jsx";
+
+
+export const BranchSwitcher = ({location}) => {
+
+
+    const branches = useSelector(getBranches)
+    const branch = useSelector(getBranch)
+    const loading = useSelector(getBranchLoading)
+
+    const dispatch = useDispatch();
+
+
+    // useEffect(() => {
+    //     if (location?.id) {
+    //         dispatch(fetchBranchesByLocationsThunk(location.id))
+    //     } else {
+    //         dispatch(onDeleteBranch())
+    //     }
+    // }, [location?.id])
+    console.log(branches, 'fffffffffffffffffffff')
+
+
+    const changeSelectedBranches = useCallback((id) => {
+        dispatch(onChangeBranch(9))
+    }, []);
+
+
+    if (loading) return
+
+    return (
+        <>
+            {branches?.length > 1 ?
+                <Select
+                    // title={"Branch"}
+                    onChangeOption={changeSelectedBranches}
+                    options={branches}
+                    defaultValue={branch?.id}
+                />
+                :
+                !!branch?.name && <div className={cls.branch}>
+                    <span>Branch:</span>
+                    <span>{branch.name}</span>
+                </div>
+            }
+
+        </>
+
+
+    );
+};
+

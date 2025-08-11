@@ -85,4 +85,4 @@ const accountingOtchotSlice = createSlice({
 })
 
 export const {getFilteredAll} = accountingOtchotSlice.actions
-export default accountingOtchotSlice.reducer
+export const accountingOtchotReducer = accountingOtchotSlice.reducer

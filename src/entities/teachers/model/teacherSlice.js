@@ -65,4 +65,4 @@ export const teachersSlice = createSlice({
 
 export const {onDelete} = teachersSlice.actions
 
-export default teachersSlice.reducer
+export const teacherReducer = teachersSlice.reducer

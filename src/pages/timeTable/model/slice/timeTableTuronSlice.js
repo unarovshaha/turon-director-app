@@ -1,7 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {fetchTeacherProfileData} from "pages/profilePage/model/thunk/teacherProfile.thunk";
 import {
-    fetchTimeTableClassHours,
+    // fetchTimeTableClassHours,
     fetchTimeTableClassView,
     fetchTimeTableColors,
     fetchTimeTableData, fetchTimeTableSubject, fetchTimeTableTeacher,

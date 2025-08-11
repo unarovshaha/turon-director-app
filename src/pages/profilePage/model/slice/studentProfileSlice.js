@@ -107,4 +107,4 @@ const StudentProfileSlice = createSlice({
 })
 
 
-export default StudentProfileSlice.reducer
+export const studentProfileReducer = StudentProfileSlice.reducer

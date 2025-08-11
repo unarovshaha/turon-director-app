@@ -10,8 +10,8 @@ const initialState = {
     error: null
 }
 
-const locationsSlice = createSlice({
-    name: "ChangeLocationSlice",
+export const locationsSlice = createSlice({
+    name: "locationsSlice",
     initialState,
     reducers: {
         addSelectedLocations: (state,action) => {
@@ -119,5 +119,5 @@ const locationsSlice = createSlice({
 
 })
 
-export default locationsSlice.reducer
+export const locationsReducer = locationsSlice.reducer
 export const {deleteSelectedLocations,addSelectedLocations,clearSelectedLocations} = locationsSlice.actions

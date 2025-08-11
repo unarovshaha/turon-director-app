@@ -66,4 +66,4 @@ const employerSlice = createSlice({
 })
 
 export const {onDeleteEmployerSalary, changePaymentType} = employerSlice.actions
-export default employerSlice.reducer
+export const employerReducer = employerSlice.reducer

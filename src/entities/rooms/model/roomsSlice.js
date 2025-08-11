@@ -41,4 +41,4 @@ export const roomsSlice = createSlice(
 
 export const {onAddRooms} = roomsSlice.actions
 
-export default roomsSlice.reducer
+export const roomReducer = roomsSlice.reducer

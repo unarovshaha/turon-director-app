@@ -50,7 +50,7 @@ const multiPageSlice = createSlice({
             })
 })
 
-export default multiPageSlice.reducer
+export const multiPageReducer = multiPageSlice.reducer
 export const {
     onChangedPage,
     onChangedOldPage,

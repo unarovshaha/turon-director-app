@@ -60,4 +60,4 @@ export const teacherSalarySlice = createSlice({
 
 export const {onChangeSalary} = teacherSalarySlice.actions
 
-export default teacherSalarySlice.reducer;
+export const teacherSalaryReducer = teacherSalarySlice.reducer;

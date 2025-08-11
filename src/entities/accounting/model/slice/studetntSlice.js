@@ -7,6 +7,12 @@ const initialState = {
     error: false,
     deletedStudentsPayment: []
 }
+
+
+
+
+
+
 const studentSlice = createSlice({
     name: "studentSlice",
     initialState,
@@ -22,7 +28,7 @@ const studentSlice = createSlice({
                 state.error = false
             })
             .addCase(getStudentPayment.fulfilled ,(state, action) =>{
-                state.studentsData = action.payload
+                state.studentsData = action.payload.results
                 state.loading = false
                 state.error = false
             } )
@@ -47,4 +53,4 @@ const studentSlice = createSlice({
 
 export const {onDeleteStudents} = studentSlice.actions
 
-export default studentSlice.reducer
+export const studentReducer = studentSlice.reducer

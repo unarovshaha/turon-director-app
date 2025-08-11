@@ -12,8 +12,8 @@ import {
     createWeekDays,
     moveGroup,
     filteredStudents,
-    fetchGroupProfileNextLesson,
-    getSchoolAttendance,
+    // fetchGroupProfileNextLesson,
+    // getSchoolAttendance,
     getGroupStudyYears,
     getGroupStudyMonth,
     getGroupDebtStudents
@@ -302,4 +302,4 @@ const groupProfileSlice = createSlice({
 })
 
 export const {getNextLesson, changeDebtStudent, deleteDebtStudent, onMoveToGroup} = groupProfileSlice.actions
-export default groupProfileSlice.reducer
+export const groupProfileReducer = groupProfileSlice.reducer

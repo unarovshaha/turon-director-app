@@ -47,4 +47,4 @@ export const employerCategorySlice = createSlice({
 
 export const {updateCategory, changeName, deleteEmployerCategory} = employerCategorySlice.actions
 
-export default employerCategorySlice.reducer
+export const employerCategoryReducer = employerCategorySlice.reducer

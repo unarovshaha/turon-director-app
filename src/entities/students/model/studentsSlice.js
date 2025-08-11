@@ -199,7 +199,7 @@ export const studentsSlice = createSlice({
             })
 })
 
-export default studentsSlice.reducer
+export const studentsReducer = studentsSlice.reducer
 
 export const {
     getFilteredStudentsData,

@@ -156,4 +156,4 @@ export const {
     deleteDayType
 } = calendarSlice.actions
 export default calendarSlice.reducer
-
+export const {reducer: calendarReducer} = calendarSlice.reducer

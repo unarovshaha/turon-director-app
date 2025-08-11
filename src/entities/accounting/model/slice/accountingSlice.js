@@ -107,5 +107,5 @@ const accountingSlice = createSlice({
 })
 
 export const {onChangeAccountingPage , onChangePage} = accountingSlice.actions
-export default accountingSlice.reducer
+export const accountingReducer = accountingSlice.reducer
 

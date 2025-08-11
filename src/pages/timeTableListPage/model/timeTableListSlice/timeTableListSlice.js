@@ -75,5 +75,5 @@ const TimeTableSlice = createSlice({
             })
 })
 
-export default TimeTableSlice.reducer
+export const timeTableReducer = TimeTableSlice.reducer
 export const {changeTime , onDelete} = TimeTableSlice.actions

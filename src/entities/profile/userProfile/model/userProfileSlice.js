@@ -233,7 +233,7 @@ const userProfileSlice = createSlice({
             })
 
 })
-
+export const userProfileReducer = userProfileSlice.reducer
 export const {
     changeUserProfile,
     changingUserProfile

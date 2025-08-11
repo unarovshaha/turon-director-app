@@ -95,4 +95,4 @@ const taskManagerSlice = createSlice({
 
 
 export const {onRemoveTask , onCountCompleted , onAddRegisterItem ,onCountPercentage , onCountProgress} = taskManagerSlice.actions;
-export default taskManagerSlice.reducer
+export const taskManagerReducer = taskManagerSlice.reducer

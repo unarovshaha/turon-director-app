@@ -1,5 +1,6 @@
 export {AccountingHeader} from "./ui/accountingHeader/accountingHeader"
 export {AccountingFilter} from "./ui/accountingFilter/accountingFilter"
+export {DirectorAccounting} from './ui/directorAccounting/directorAccounting.jsx'
 
 
 
@@ -25,13 +26,13 @@ export {EmpSalaryTable} from "./ui/accountingOtchot/empSalaryTable"
 export {PaymentTable} from "./ui/accountingOtchot/paymentTable"
 
 
-export {default as accountingSlice} from "./model/slice/accountingSlice"
-export {default as studentSlice} from "./model/slice/studetntSlice"
-export {default as employerSlice} from "./model/slice/employerSalary"
-export {default as teacher} from "./model/slice/teacher"
-export {default as overHeadSlice} from "./model/slice/additionalCosts"
-export {default as capitalSlice} from "./model/slice/capital"
-export {default as otchotAccountingSlice} from "./model/slice/otchotAccountingSlice"
+export {accountingReducer} from "./model/slice/accountingSlice"
+export {studentReducer} from "./model/slice/studetntSlice"
+export {employerReducer} from "./model/slice/employerSalary"
+export {teacherReducer} from "./model/slice/teacher"
+export {overHeadReducer} from "./model/slice/additionalCosts"
+export {capitalListReducer} from "./model/slice/capital"
+export {accountingOtchotReducer} from "./model/slice/otchotAccountingSlice"
 
 export {overHeadDeletedList} from "./model/thunk/additionalCosts";
 export {capitalDeletedListThunk} from "./model/thunk/capital";

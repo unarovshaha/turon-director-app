@@ -99,5 +99,5 @@ export const loginSlice =createSlice({
             })
 
 })
-export default loginSlice.reducer
+export const loginReducer = loginSlice.reducer
 export const {getUserData, userRefresh} = loginSlice.actions

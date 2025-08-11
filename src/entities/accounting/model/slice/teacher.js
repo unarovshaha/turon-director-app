@@ -69,4 +69,4 @@ const teacherSalary = createSlice({
 })
 
 export const {onDeleteTeacherSalary, onChangePayment} = teacherSalary.actions
-export default teacherSalary.reducer
+export const teacherReducer = teacherSalary.reducer

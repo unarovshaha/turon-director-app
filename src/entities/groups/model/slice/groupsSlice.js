@@ -68,4 +68,4 @@ export const groupsSlice = createSlice({
 })
 
 export const {deleteGroup} = groupsSlice.actions
-export default groupsSlice.reducer
+export const groupsReducer = groupsSlice.reducer

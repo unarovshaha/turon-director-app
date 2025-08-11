@@ -5,7 +5,7 @@ export const getTeacherSalary = createAsyncThunk(
     "teacherSalary/getTeacherSalary",
     async (branchID) => {
         const {request} =useHttp()
-        return await request(`${API_URL}Teachers/teacher-salary-list/?status=False&branch=${branchID.id}` , "GET" , null , headers())
+        return await request(`${API_URL}Teachers/teacher-salary-list/?status=False&branch=${branchID}` , "GET" , null , headers())
     }
 )
 

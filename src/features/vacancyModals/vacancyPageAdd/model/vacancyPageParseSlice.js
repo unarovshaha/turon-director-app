@@ -26,4 +26,4 @@ export const vacancyPageParseSlice = createSlice({
             })
 })
 
-export default vacancyPageParseSlice.reducer
+export const vacancyPageParseReducer = vacancyPageParseSlice.reducer

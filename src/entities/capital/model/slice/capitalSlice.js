@@ -172,4 +172,4 @@ export const CapitalSlice = createSlice({
 
 export const {onDeleteBranch}  =CapitalSlice.actions
 
-export default CapitalSlice.reducer
+export const capitalReducer = CapitalSlice.reducer

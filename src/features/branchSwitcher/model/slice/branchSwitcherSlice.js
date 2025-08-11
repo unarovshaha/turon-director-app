@@ -56,5 +56,5 @@ const branchSwitcherSlice = createSlice({
             })
 })
 
-export default branchSwitcherSlice.reducer
+export const branchSwitcherReducer = branchSwitcherSlice.reducer
 export const {onChangeBranch, onDeleteBranch} = branchSwitcherSlice.actions
