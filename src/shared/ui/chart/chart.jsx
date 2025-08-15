@@ -116,6 +116,7 @@ export const HorizontalChart = ({newStudents, studyingStudents}) => {
                 label: 'Foizda (%)',
             },
         ],
+
         height: 400,
         layout: 'horizontal',
         margin: { left: 100 },
@@ -131,7 +132,7 @@ export const HorizontalChart = ({newStudents, studyingStudents}) => {
                     {id: 1, value: 1, label: 'Chirchiq'},
                     {id: 2, value: 10, label: 'Sergeli'},
                 ] }
-                yAxis={[{ scaleType: 'band', dataKey: 'name' }]}
+                yAxis={[{ scaleType: 'band', dataKey: 'name', width: 120 }]}
                 series={[
                     { dataKey: 'percentage', label: 'Filiallarning ishlash unumdorligi', valueFormatter },
                 ]}
