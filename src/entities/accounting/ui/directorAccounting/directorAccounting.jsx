@@ -120,7 +120,7 @@ export const DirectorAccounting = ({data}) => {
             <EditableCard extraClass={cls.main__summary} titleType={""}>
                 <h1>Moliyaviy xulosa</h1>
                 <div className={cls.main__summary__arounder}>
-                    {data.map((category, branchIndex) => (
+                    {data?.map((category, branchIndex) => (
                         <EditableCard extraClass={cls.main__summary__arounder__box} titleType={""}>
                         <span className={cls.main__summary__arounder__box__header}>
                             {getCategoryIcon(category.type)}

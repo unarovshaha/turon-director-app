@@ -41,7 +41,7 @@ const employerSlice = createSlice({
             })
             .addCase(getEmpSalary.fulfilled, (state, action) => {
                 state.employerSalary = action.payload
-                console.log(action.payload, "emp")
+                // console.log(action.payload, "emp")
                 state.loading = false
                 state.error = false
             })

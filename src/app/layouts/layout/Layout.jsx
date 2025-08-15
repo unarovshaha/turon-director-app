@@ -30,7 +30,7 @@ export const Layout = () => {
     const system = useSelector(getSystem)
     const systems = JSON.parse(localStorage.getItem("selectedSystem"))
 
-    console.log(systems, 'ssss')
+
 
 
 

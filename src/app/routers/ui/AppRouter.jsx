@@ -61,9 +61,9 @@ export const AppRouter = () => {
                 {/*    element={<Register/>}*/}
                 {/*/>*/}
 
-                <Route path={"/register/target/*"} element={<LayoutTarget>
-                    <Target/>
-                </LayoutTarget>}/>
+                {/*<Route path={"/register/target/*"} element={<LayoutTarget>*/}
+                {/*    <Target/>*/}
+                {/*</LayoutTarget>}/>*/}
 
                 <Route element={<RequireAuth/>}>
 
@@ -113,23 +113,23 @@ export const AppRouter = () => {
                         />
 
 
-                        <Route
-                            path={"molasses"}
-                            element={<ClassMolassesPage/>}
-                        />
-                        <Route
-                            path={"flows/flowsProfile/:id"}
-                            element={<FlowProfileNavigators/>}
-                        />
+                        {/*<Route*/}
+                        {/*    path={"molasses"}*/}
+                        {/*    element={<ClassMolassesPage/>}*/}
+                        {/*/>*/}
+                        {/*<Route*/}
+                        {/*    path={"flows/flowsProfile/:id"}*/}
+                        {/*    element={<FlowProfileNavigators/>}*/}
+                        {/*/>*/}
 
-                        <Route
-                            path={"flows/flow-list"}
-                            element={<FlowListPage/>}
-                        />
-                        <Route
-                            path={"classColorAdd"}
-                            element={<ClassAddColorPage/>}
-                        />
+                        {/*<Route*/}
+                        {/*    path={"flows/flow-list"}*/}
+                        {/*    element={<FlowListPage/>}*/}
+                        {/*/>*/}
+                        {/*<Route*/}
+                        {/*    path={"classColorAdd"}*/}
+                        {/*    element={<ClassAddColorPage/>}*/}
+                        {/*/>*/}
 
 
                         <Route

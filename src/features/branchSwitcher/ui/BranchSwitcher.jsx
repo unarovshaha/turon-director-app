@@ -27,7 +27,7 @@ export const BranchSwitcher = ({location}) => {
     //         dispatch(onDeleteBranch())
     //     }
     // }, [location?.id])
-    console.log(branches, 'fffffffffffffffffffff')
+
 
 
     const changeSelectedBranches = useCallback((id) => {
@@ -39,19 +39,19 @@ export const BranchSwitcher = ({location}) => {
 
     return (
         <>
-            {branches?.length > 1 ?
-                <Select
-                    // title={"Branch"}
-                    onChangeOption={changeSelectedBranches}
-                    options={branches}
-                    defaultValue={branch?.id}
-                />
-                :
-                !!branch?.name && <div className={cls.branch}>
-                    <span>Branch:</span>
-                    <span>{branch.name}</span>
-                </div>
-            }
+            {/*{branches?.length > 1 ?*/}
+            {/*    <Select*/}
+            {/*        // title={"Branch"}*/}
+            {/*        onChangeOption={changeSelectedBranches}*/}
+            {/*        options={branches}*/}
+            {/*        defaultValue={branch?.id}*/}
+            {/*    />*/}
+            {/*    // :*/}
+            {/*    // !!branch?.name && <div className={cls.branch}>*/}
+            {/*    //     <span>Branch:</span>*/}
+            {/*    //     <span>{branch.name}</span>*/}
+            {/*    // </div>*/}
+            {/*}*/}
 
         </>
 

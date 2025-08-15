@@ -101,7 +101,6 @@ export const Dashboard = () => {
             icons: cardIcons[section.type]
         };
     });
-    console.log(locations, 'da')
 
 
     useEffect(() => {
@@ -140,7 +139,7 @@ export const Dashboard = () => {
             {renderCards()}
             </div>
             <div className={cls.main__center}>
-                <EditableCard extraClass={cls.main__center__box}  titleType={""} >
+                <EditableCard extraClass={cls.main__center__card}  titleType={""} >
                     <Barchart data={flatNewStudents}/>
                 </EditableCard>
                 <EditableCard extraClass={cls.main__center__card} titleType={""} >

@@ -22,7 +22,7 @@ export const overHeadSlice = createSlice({
         },
 
         onChangePaymentType: (state, action) => {
-            console.log(action.payload)
+            // console.log(action.payload)
             state.overHeadList = state.overHeadList.map(item => {
                 if (item.id === +action.payload.id) {
                     console.log(item.id, action.payload.id, " item")
