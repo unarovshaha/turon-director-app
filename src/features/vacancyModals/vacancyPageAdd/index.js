@@ -1,4 +1,4 @@
-export {default as vacancySlice} from './model/vacancyPageAddSlice'
+// export {default as vacancySlice} from './model/vacancyPageAddSlice'
 // export {default as vacancyPageParseSlice} from './model/vacancyPageParseSlice'
 export {fetchVacancyData} from './model/vacancyPageParseThunk'
 export {vacancyPageAddThunk} from './model/vacancyPageAddThunk'

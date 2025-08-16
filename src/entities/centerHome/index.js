@@ -9,4 +9,4 @@ export {Results} from "./ui/homeResults/results";
 export {HomeTeachers} from "./ui/homeTeachers/homeTeachers";
 
 
-export {default as homeSlice} from "./model/homeSlice"
+// export {default as homeSlice} from "./model/homeSlice"

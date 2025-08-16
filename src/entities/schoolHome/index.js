@@ -26,18 +26,3 @@ export {StudentCouncil} from "./ui/studentCouncil/studentCouncil";
 export {OurStudent} from "./ui/ourStudent/ourStudent"
 
 
-export {default as schoolProfileSlice} from "./model/slice/schoolHomeStudentProfileSlice"
-export {default as schoolLatestSlice} from "./model/slice/SchoolHomeLatestNewSlice"
-export {default as schoolCurricularSlice} from "./model/slice/schoolCurricularSlice"
-export {default as schoolLeaderSheapSlice} from "./model/slice/schoolLeaderSheapSlice"
-export {default as getHomePageSlice} from "./model/slice/getHomePageSlice"
-export {default as schoolHomeMainSlice} from "./model/slice/schoolHomeMain";
-export {default as schoolHomeCertificatSlice} from "./model/slice/schoolHomeCertificatsSlice";
-export {default as schoolHomeGallerySlice} from "./model/slice/schoolHomeGallerySlice";
-
-
-
-
-export {default as homeContactUsSlice} from "./model/slice/SchoolHomeContactUsSlice"
-export {default as visionSchoolSlice} from "./model/slice/missionSchoolSlice"
-

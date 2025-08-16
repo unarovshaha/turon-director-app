@@ -15,12 +15,12 @@ export {StudentProfileAttendanceAll} from "./ui/studentProfileAttendanceAll/stud
 
 export {amountService, amountTypes} from "./model/consts/amountConsts";
 
-export {default as studentProfilePayment} from "./model/slice/paymentSlice";
+// export {default as studentProfilePayment} from "./model/slice/paymentSlice";
 export {getPaymentData} from "./model/selectors/paymentSelector";
 
-export {default as studentProfileBooks} from "./model/slice/booksSlice";
+// export {default as studentProfileBooks} from "./model/slice/booksSlice";
 export {getBooksData} from "./model/selectors/booksSelector";
 
-export {default as studentProfileRating} from "./model/slice/ratingSlice";
+// export {default as studentProfileRating} from "./model/slice/ratingSlice";
 export {getRatingData} from "./model/selectors/ratingSelector";
 export {fetch} from "./model/slice/ratingSlice";

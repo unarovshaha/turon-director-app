@@ -11,4 +11,4 @@ export {ClassColorAddFilter} from "./ui/classColorAdd/classColorAddFilter/classC
 
 
 
-export {default as classSlice} from "./model/slice/classSlice"
+// export {default as classSlice} from "./model/slice/classSlice"

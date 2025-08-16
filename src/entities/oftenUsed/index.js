@@ -1,4 +1,4 @@
-export {default as oftenUsedSlice, oftenUsedReducer} from "./model/oftenUsedSlice";
+export {oftenUsedReducer} from "./model/oftenUsedSlice";
 
 export {
     fetchClassColorData,

@@ -1,0 +1,1 @@
+const s=e=>e.userProfileSlice.salaryData,r=e=>e.userProfileSlice.salaryInnerData,a=e=>e.userProfileSlice.userData,o=e=>e.userProfileSlice.loading,t=e=>e.userProfileSlice.userBranchId,i=e=>e.userProfileSlice.userSystemId,l=e=>e.userProfileSlice.userPermissions,c=e=>e.userProfileSlice.userJob;export{i as a,t as b,l as c,c as d,o as e,s as f,a as g,r as h};

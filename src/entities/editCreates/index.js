@@ -3,10 +3,10 @@ export {System} from "./ui/system/system"
 export {Education} from "./ui/education/education"
 export {Location} from "./ui/location/location"
 
-export {default as systemSlice} from "./model/slice/systemSlice"
-export {default as getBranchSlice} from "./model/slice/branchSlice"
+// export {default as systemSlice} from "./model/slice/systemSlice"
+// export {default as getBranchSlice} from "./model/slice/branchSlice"
 // export {default as getLocationSlice} from "./model/slice/locationSlice"
-export {default as getEducation} from "./model/slice/educationSlice"
+// export {default as getEducation} from "./model/slice/educationSlice"
 
 export {getLocation} from "./model/selector/locationSelector"
 
