@@ -16,7 +16,7 @@ export const menuConfig = [
         name: "Dashboard",
         icon: "fas fa-dashboard",
         system: ["school"],
-        roles: [ROLES.director],
+        roles: [ROLES.director, ROLES.admin],
     },
     // {
     //     to: "students",
@@ -146,12 +146,12 @@ export const menuConfig = [
     //     roles: [ROLES.smm]
     // },
     //
-    // {
-    //     to: "adminTaskManager",
-    //     name: "Task Manager",
-    //     icon: "fa-tasks",
-    //     system: ["center","school"],
-    //     roles: [ROLES.admin]
-    // }
+    {
+        to: "adminTaskManager",
+        name: "Task Manager",
+        icon: "fa-tasks",
+        system: ["center","school"],
+        roles: [ROLES.director, ROLES.admin]
+    }
 
 ];

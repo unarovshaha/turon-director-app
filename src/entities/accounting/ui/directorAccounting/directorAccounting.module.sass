@@ -1,20 +1,37 @@
 .main
   width: 100%
-  padding: 4rem
+  padding-top: 15rem
   display: flex
   flex-direction: column
   gap: 3rem
+  padding-left: 2rem
+  padding-right: 2rem
   &__header
     display: flex
-    flex-direction: column
+    padding: 2rem
+    justify-content: space-between
     gap: 1rem
+    &__box
+    &__btn
+      font-family: "Montserrat", sans-serif !important
+      background: #4aa15d
+      color: white
+      font-size: 1rem !important
+      transition: .5s ease
+
+      &:hover
+        background: #4aa15d
+        box-shadow: none
+        color: white
+
+
     &__article
-      font-size: 3rem
+      font-size: 2rem
       font-family: "Montserrat", sans-serif
       font-weight: bold
       text-transform: capitalize
     &__para
-      font-size: 2rem
+      font-size: 1rem
       font-family: "Montserrat", sans-serif
       font-weight: 500
   &__card
@@ -35,7 +52,7 @@
         display: flex
         gap: 1rem
         align-items: center
-        font-size: 2rem
+        font-size: 1.3rem
         h2
           color: black
           text-transform: capitalize
@@ -43,7 +60,7 @@
         background: #efefef
         border-radius: 3rem
         padding: 1rem
-        font-size: 1.6rem
+        font-size: 1.3rem
 
     &__content
       width: 100%
@@ -51,8 +68,8 @@
       flex-wrap: wrap
       gap: 2rem
       &__box
-        min-width: 400px
-        min-height: 200px
+        min-width: 300px
+        min-height: 150px
         border-radius: 2rem !important
         display: flex
         border:  1px solid #c4c8cf
@@ -67,7 +84,7 @@
           justify-content: space-between
           border-bottom: 1px solid #c4c8cf
           h2
-            font-size: 2.3rem
+            font-size: 1.6rem
             color: black
           span
             border:  1px solid #c1c3c5
@@ -87,11 +104,11 @@
             align-items: center
             justify-content: space-between
             h3
-              font-size: 1.8rem
+              font-size: 1.3rem
               font-weight: 500
               font-family: "Montserrat", sans-serif
             h4
-              font-size: 2.4rem
+              font-size: 1.8rem
               color: #39ae60
             &__handler
               background: #eff1f1
@@ -117,7 +134,7 @@
     background: #EEF5FE !important
     padding: 4rem !important
     h1
-      font-size: 3rem
+      font-size: 1.7rem
     &__arounder
       width: 100%
       display: flex
@@ -125,7 +142,7 @@
       gap: 2rem
       flex-wrap: wrap
       &__box
-        min-width: 400px
+        min-width: 300px
         display: flex
         align-items: center
         flex-direction: column
@@ -134,18 +151,216 @@
         &__header
           flex-direction: column
           display: flex
-          font-size: 1.4rem
+          font-size: 1.2rem
           align-items: center
           h2
             font-weight: 500
             text-transform: capitalize
             font-family: "Montserrat", sans-serif
         h3
-          font-size: 2.4rem
+          font-size: 1.9rem
           color: #155DFC
 
 
+.extend
+  width: 100%
+  display: flex
+  flex-direction: column
+  padding-right: 2rem
+  gap: 2rem
+  &__headerBox
+    overflow: hidden
+    border-radius: 2rem !important
+    border: .2px solid #c4c8cf
+    display: flex
+    padding: 0 !important
+    flex-direction: column
+    gap: 0 !important
+    &__header
+      width: 100%
+      height: 30%
+      background: #F3F4F6
+      padding: 2rem
+      h1
+        font-family: "Montserrat", sans-serif
+        font-size: 1.8rem
+        font-weight: 600
+    &__main
+      width: 100%
+      border-top: .5px solid #c4c8cf
+      //border: .1px solid #c4c8cf
+      padding: 2rem
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &__article
+        color: #4CAF50
+        font-size: 1.7rem
+        font-family: "Montserrat", sans-serif
+      &__left
+        display: flex
+        align-items: center
+        gap: 1rem
+        h1
+          font-size: 1.7rem
+          font-weight: 500
+          font-family: "Montserrat", sans-serif
+    &__footer
+      width: 100%
+      padding: 2rem
+      background: #EFF6FF
+      display: flex
+      justify-content: space-between
+      align-items: center
+      border-top: .5px solid #c4c8cf
+      &__article
+        color: #2563EB
+        font-size: 2rem
+        font-family: "Montserrat", sans-serif
+  &__table
+    border-radius: 2rem
+    display: flex
+    gap: 0 !important
+    justify-content: space-between
+    width: 100%
+    &__debt
+      width: 50%
+      display: flex
+      border-right: .5px solid #c4c8cf
+      flex-direction: column
+      gap: 2rem
+      align-items: center
 
+      &__header
+        width: 100%
+        display: flex
+        align-items: center
+        padding: 2rem
+        gap: 2rem
+        border-bottom: .5px solid #c4c8cf
+        &__article
+          color: #4CAF50
+          font-size: 1.8rem
+          font-family: "Montserrat", sans-serif
+          text-transform: uppercase
+      &__card
+        width: 90%
+        padding: 0 !important
+        border-radius: 1.3rem !important
+        overflow: hidden
+        box-shadow: none !important
+        border: 3px solid #c4c8cf
+        display: flex
+        flex-direction: column
+        &__header
+          width: 100%
+          display: flex
+          align-items: center
+          justify-content: space-between
+          background: #F0FDF4
+          padding: 2rem
+          border-bottom: 1px solid #22C55E
+          span
+            display: flex
+            align-items: center
+            gap: 2rem
+            h1
+              color: black
+              font-weight: 500
+              font-size: 1.5rem
+          h1
+            color: #4CAF50
+            font-size: 1.9rem
+        &__items
+          width: 100%
+          flex-direction: column
+          display: flex
+          align-items: center
+          &__item
+            width: 100%
+            padding: 2rem
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &:hover
+              background: #f3f5f6
+            span
+              display: flex
+              flex-direction: column
+              gap: 1rem
+              h1
+                font-family: "Montserrat", sans-serif
+                font-size: 1.5rem
+            h1
+              font-size: 1.6rem
+    &__credit
+      width: 50%
+      display: flex
+      align-items: center
+      flex-direction: column
+      gap: 2rem
+      &__header
+        width: 100%
+        display: flex
+        align-items: center
+        padding: 2rem
+        gap: 2rem
+        border-bottom: .5px solid #c4c8cf
+        &__article
+          color: #EF4444
+          font-size: 1.8rem
+          font-family: "Montserrat", sans-serif
+          text-transform: uppercase
+      &__card
+        width: 90%
+        padding: 0 !important
+        border-radius: 1.3rem !important
+        overflow: hidden
+        box-shadow: none !important
+        border: 3px solid #c4c8cf
+        display: flex
+        flex-direction: column
+        &__header
+          width: 100%
+          display: flex
+          align-items: center
+          justify-content: space-between
+          background: #FEF2F2
+          padding: 2rem
+          border-bottom: 1px solid #EF4444
+          span
+            display: flex
+            align-items: center
+            gap: 2rem
+            h1
+              color: black
+              font-weight: 500
+              font-size: 1.6rem
+          h1
+            color: #EF4444
+            font-size: 1.8rem
+        &__items
+          width: 100%
+          flex-direction: column
+          display: flex
+          align-items: center
+          &__item
+            width: 100%
+            padding: 2rem
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &:hover
+              background: #f3f5f6
+            span
+              display: flex
+              flex-direction: column
+              gap: 1rem
+              h1
+                font-family: "Montserrat", sans-serif
+                font-size: 1.6rem
+            h1
+              font-size: 1.8rem
 
 
 

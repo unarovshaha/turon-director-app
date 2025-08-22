@@ -1,11 +1,13 @@
 @import "app/styles/abstracts/variables"
 
 .header
-  width: 100%
+  width: 88vw
   height: $appHeader-height
   display: flex
   flex-direction: column
   z-index: 1000
+  position: fixed
+  background: white
   //box-shadow: 0 4px 4px $main-border-color
   padding: 2rem 5rem
 
@@ -30,8 +32,14 @@
   &__bottom
     height: 35%
     display: flex
-    justify-content: space-between
+    justify-content: end
     align-items: center
+    position: relative
+    &__back
+      display: flex
+      position: absolute
+      left: 0
+      top: 10px
   &__back
     display: flex
     gap: 1.5rem

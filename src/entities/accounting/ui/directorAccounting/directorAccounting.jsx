@@ -1,8 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import cls from './directorAccounting.module.sass'
 import {EditableCard} from "shared/ui/editableCard/index.js";
+import {Button} from "shared/ui/button/index.js";
+import {
+    TrendingUp,
+    TrendingDown,
+    Users,
+    Building2,
+    Calculator,
+    DollarSign,
+    School
+} from 'lucide-react'
 
 export const DirectorAccounting = ({data}) => {
+
+    const [active, setActive] = useState(true);
+
 
     const formatCurrency = (amount) => {
         return new Intl.NumberFormat("uz-UZ", {
@@ -58,6 +71,8 @@ export const DirectorAccounting = ({data}) => {
         }
     }
 
+    console.log(active, 'active')
+
 
     const renderCards = () => {
         return data?.map((category, branchIndex) => {
@@ -107,31 +122,185 @@ export const DirectorAccounting = ({data}) => {
         })
     }
 
+    const renderDebitSide = () => {
+        const totalIncome = data
+            ?.filter(category => category.type === "studentsPayments")
+            .reduce((sum, category) => sum + calculateCategoryTotal(category), 0);
+
+        const totalExpense = data
+            ?.filter(category =>
+                ["teachersSalary", "employeesSalary", "overhead", "capital"].includes(category.type)
+            )
+            .reduce((sum, category) => sum + calculateCategoryTotal(category), 0);
+
+
+        const netProfit = totalIncome - totalExpense;
+
+        return (
+            <div className={cls.extend}>
+                <EditableCard extraClass={cls.extend__headerBox} titleType={""}>
+                    <div className={cls.extend__headerBox__header}>
+                        <h1>Umumiy ko'rsatkichlar</h1>
+                    </div>
+
+                    <div className={cls.extend__headerBox__main}>
+                        <div className={cls.extend__headerBox__main__left}>
+                            <TrendingUp color={"#4CAF50"}/>
+                            <h1>Umumiy kirim</h1>
+                        </div>
+                        <h1 className={cls.extend__headerBox__main__article}>{formatCurrency(totalIncome)}</h1>
+                    </div>
+
+                    <div className={cls.extend__headerBox__main}>
+                        <div className={cls.extend__headerBox__main__left}>
+                            <TrendingDown color={"#EF4444"}/>
+                            <h1>Umumiy chiqim</h1>
+                        </div>
+                        <h1 style={{color: "#EF4444"}}
+                            className={cls.extend__headerBox__main__article}>{formatCurrency(totalExpense)}</h1>
+                    </div>
+
+                    <div className={cls.extend__headerBox__footer}>
+                        <div className={cls.extend__headerBox__main__left}>
+                            <Calculator color={"#2563EB"}/>
+                            <h1>Sof foyda</h1>
+                        </div>
+                        <h1 className={cls.extend__headerBox__footer__article}> {formatCurrency(netProfit)}</h1>
+                    </div>
+                </EditableCard>
+                <EditableCard extraClass={cls.extend__table} titleType={""}>
+                    <div className={cls.extend__table__debt}>
+                        <div className={cls.extend__table__debt__header}>
+                            <TrendingUp color={"#4CAF50"}/>
+                            <h1 className={cls.extend__table__debt__header__article}>Kirim</h1>
+                        </div>
+                        {
+                            data?.filter(category => category.type === "studentsPayments").map((category, index) => (
+                                <EditableCard extraClass={cls.extend__table__debt__card} titleType={""}>
+                                    <div className={cls.extend__table__debt__card__header}>
+                                        <span>
+                                            <div style={{background: "#22C55E", padding: "1rem", borderRadius: ".5rem"}}>
+                                                <Users color={"#FFFFFF"}/>
+                                            </div>
+
+                                           <h1>{category.name}</h1>
+                                        </span>
+                                        <h1>{formatCurrency(calculateCategoryTotal(category))}</h1>
+                                    </div>
+                                    <div className={cls.extend__table__debt__card__items}>
+                                        {
+                                            category.list.map((branch, branchIndex) => (
+                                                <div className={cls.extend__table__debt__card__items__item}>
+                                                    <span>
+                                                        <h1>{branch.name}</h1>
+                                                        <h3>{branch.list[0]?.count || 0} ta</h3>
+                                                    </span>
+                                                    {
+                                                        branch.list.map((item) => (
+                                                                <h1 style={{color: "#39ae60"}}>{formatCurrency(item.summa)}</h1>
+                                                        ))
+                                                    }
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+
+                                </EditableCard>
+                            ))
+                        }
+
+                    </div>
+                    <div className={cls.extend__table__credit}>
+                        <div className={cls.extend__table__credit__header}>
+                            <TrendingDown color={"#EF4444"}/>
+                            <h1 className={cls.extend__table__credit__header__article}>Chiqim</h1>
+                        </div>
+                        {
+                            data?.filter(category =>
+                                ["teachersSalary", "employeesSalary", "overhead", "capital"].includes(category.type)
+                            ).map((category, index) => (
+                                <EditableCard extraClass={cls.extend__table__credit__card} titleType={""}>
+                                    <div className={cls.extend__table__credit__card__header}>
+                                        <span>
+                                            <div style={{background: "#EF4444", padding: "1rem", borderRadius: ".5rem"}}>
+                                                <DollarSign color={"#FFFFFF"}/>
+                                            </div>
+
+                                           <h1>{category.name}</h1>
+                                        </span>
+                                        <h1>{formatCurrency(calculateCategoryTotal(category))}</h1>
+                                    </div>
+                                    <div className={cls.extend__table__credit__card__items}>
+                                        {
+                                            category.list.map((branch, branchIndex) => (
+                                                <div className={cls.extend__table__credit__card__items__item}>
+                                                    <span>
+                                                        <h1>{branch.name}</h1>
+                                                        <h3>{branch.list[0]?.count || 0} ta</h3>
+                                                    </span>
+                                                    {
+                                                        branch.list.map((item) => (
+                                                            <h1 style={{color: "#EF4444"}}>{formatCurrency(item.summa)}</h1>
+                                                        ))
+                                                    }
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+
+                                </EditableCard>
+                            ))
+
+                        }
+                    </div>
+                </EditableCard>
+            </div>
+        )
+    }
 
     return (
         <div className={cls.main}>
             <div className={cls.main__header}>
-                <h1 className={cls.main__header__article}>Moliyaviy panel</h1>
-                <p className={cls.main__header__para}>Barcha filiallar bo'yicha to'lovlar va xarajatlarning umumiy
-                    ko'rinishi</p>
+                <div className={cls.main__header__box}>
+                    <h1 className={cls.main__header__article}>Moliyaviy panel</h1>
+                    <p className={cls.main__header__para}>Barcha filiallar bo'yicha to'lovlar va xarajatlarning umumiy
+                        ko'rinishi</p>
+                </div>
+                <Button onClick={() => setActive(!active)} extraClass={cls.main__header__btn}
+                        children={active && active ? "Kirim/Chiqim 🔄" : "Yopish"}/>
+
             </div>
 
-            {renderCards()}
-            <EditableCard extraClass={cls.main__summary} titleType={""}>
-                <h1>Moliyaviy xulosa</h1>
-                <div className={cls.main__summary__arounder}>
-                    {data?.map((category, branchIndex) => (
-                        <EditableCard extraClass={cls.main__summary__arounder__box} titleType={""}>
-                        <span className={cls.main__summary__arounder__box__header}>
-                            {getCategoryIcon(category.type)}
-                            <h2>{category.name}</h2>
-                        </span>
-                            <h3>{formatCurrency(calculateCategoryTotal(category))}</h3>
-                        </EditableCard>
-                    ))}
-                </div>
+            {(() => {
+                if (active) {
+                    return (
+                        <>
+                            {renderCards()}
 
-            </EditableCard>
+                            <EditableCard extraClass={cls.main__summary} titleType={""}>
+                                <h1>Moliyaviy xulosa</h1>
+                                <div className={cls.main__summary__arounder}>
+                                    {data?.map((category, branchIndex) => (
+                                        <EditableCard
+                                            key={branchIndex}
+                                            extraClass={cls.main__summary__arounder__box}
+                                            titleType={""}
+                                        >
+                                <span className={cls.main__summary__arounder__box__header}>
+                                    {getCategoryIcon(category.type)}
+                                    <h2>{category.name}</h2>
+                                </span>
+                                            <h3>{formatCurrency(calculateCategoryTotal(category))}</h3>
+                                        </EditableCard>
+                                    ))}
+                                </div>
+                            </EditableCard>
+                        </>
+                    )
+                } else {
+                    return renderDebitSide()
+                }
+            })()}
         </div>);
 };
 

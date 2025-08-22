@@ -39,7 +39,7 @@ export const Header = () => {
 
     const selectedLocations = useSelector(getSelectedLocations)
     const locations = useSelector(getLocations)
-    const system = JSON.parse(localStorage.getItem("selectedSystem"))
+    const pathName = pathname.slice(10,20)
 
 
     useEffect(() => {
@@ -103,6 +103,7 @@ export const Header = () => {
         dispatch(deleteSelectedLocations(id))
     }
 
+    console.log(pathName, 'path')
     // useEffect(() => {
     //     if (selectedLocations.length < 1) {
     //         dispatch(onDeleteBranch())
@@ -128,19 +129,24 @@ export const Header = () => {
             </div>
             <div className={cls.header__bottom}>
 
+                {
+                    pathName && pathName === "dashboard" ?
+                        null :
+                        <BackButton
+                            className={cls.header__bottom__back}
+                            onClick={() => {
+                                if (locationHistory.length) {
+                                    locationHistory.shift();
+                                    navigate(locationHistory[0]);
+                                    locationHistory.shift();
+                                }
+                                setSearchParams({});
+                                setValueData(null);
+                            }}
+                        />
+                }
 
 
-                <BackButton
-                    onClick={() => {
-                        if (locationHistory.length) {
-                            locationHistory.shift();
-                            navigate(locationHistory[0]);
-                            locationHistory.shift();
-                        }
-                        setSearchParams({});
-                        setValueData(null);
-                    }}
-                />
 
                 <div className={cls.header__selected}>
                     {locations.length > 1 && selectedLocations.map(item => (

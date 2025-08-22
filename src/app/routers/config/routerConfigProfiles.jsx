@@ -76,11 +76,6 @@ export const routersConfigProfile = [
         element: <StudentProfilePage/>,
     },
     {
-        name: "Task Manager",
-        path: getRouteTaskManager(":id"),
-        element: <TaskManager/>,
-    },
-    {
         to: "capitalBox",
         name: "capitalInside",
         path: getCapitalInside(":id"),

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {getSelectedLocationsByIds} from "features/locations/model/selector/locationsSelector.js";
 import {fetchMultiPageDataThunk, getMultiPageData, multiPageReducer} from "widgets/multiPage/index.js";
@@ -7,6 +7,7 @@ import {Barchart, Chart, HorizontalChart} from "shared/ui/chart/index.js";
 import {EditableCard} from "shared/ui/editableCard/index.js";
 import {DynamicModuleLoader} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader.jsx";
 import {locationsReducer} from "features/locations/index.js";
+import {Button} from "shared/ui/button/index.js";
 const types = [
 
     {
@@ -32,6 +33,10 @@ const types = [
     {
         name: "Yangi o'quvchilar",
         type: "new_students"
+    },
+    {
+        name: "Lead",
+        type: "leads"
     }
 
 ];
@@ -42,7 +47,8 @@ const typeColors2 = {
     studying_students: "#FEC59F",
     rooms: "#6eccff",
     worker: "#5BE2FD",
-    new_students: "#9ffec0"
+    new_students: "#9ffec0",
+    leads: "#3b82f6"
 };
 
 const typeColors = {
@@ -51,7 +57,8 @@ const typeColors = {
     studying_students: "#FA9757",
     rooms: "#2ab4ff",
     worker: "#02B2D4",
-    new_students: "#57faa3"
+    new_students: "#57faa3",
+    leads: "#3b82f6"
 };
 
 const cardNames = {
@@ -60,17 +67,19 @@ const cardNames = {
     studying_students: "O'qiyotgan o'quvchilar",
     rooms: "Xonalar",
     worker: "Ishchilar",
-    new_students: "Yangi o'quvchilar"
+    new_students: "Yangi o'quvchilar",
+    leads: "Leadlar"
 
 }
 
 const cardIcons = {
-    studying_students: <i style={{fontSize: "6rem", color: "#FA9757"}}  className="fa-solid fa-graduation-cap"></i>,
-    teachers: <i style={{fontSize: "6rem",color: "#7C76DE"}} className="fa-solid fa-people-group"></i>,
-    worker: <i style={{fontSize: "6rem",color: "#02B2D4"}} className="fa-solid fa-users-line"></i>,
-    groups: <i style={{fontSize: "6rem",color:  "#49579B"}} className="fa-solid fa-children"></i>,
-    rooms: <i style={{fontSize: "6rem",color: "#6eccff"}} className="fa-solid fa-door-open"></i>,
-    new_students: <i style={{fontSize: "6rem", color: "#8dfa57"}}  className="fa-solid fa-graduation-cap"></i>
+    studying_students: <i style={{fontSize: "5rem", color: "#FA9757"}}  className="fa-solid fa-graduation-cap"></i>,
+    teachers: <i style={{fontSize: "5rem",color: "#7C76DE"}} className="fa-solid fa-people-group"></i>,
+    worker: <i style={{fontSize: "5rem",color: "#02B2D4"}} className="fa-solid fa-users-line"></i>,
+    groups: <i style={{fontSize: "5rem",color:  "#49579B"}} className="fa-solid fa-children"></i>,
+    rooms: <i style={{fontSize: "5rem",color: "#6eccff"}} className="fa-solid fa-door-open"></i>,
+    new_students: <i style={{fontSize: "5rem", color: "#8dfa57"}}  className="fa-solid fa-graduation-cap"></i>,
+    leads: <i style={{fontSize: "5rem", color: "#3b82f6"}}  className="fa-solid fa-user-gear"></i>
 }
 
 
@@ -83,6 +92,7 @@ export const Dashboard = () => {
     const locations = useSelector(getSelectedLocationsByIds)
     const dispatch = useDispatch()
     const data = useSelector(getMultiPageData)
+    const [active, setActive] = useState(false);
     const onlyStudyingList = data?.find(item => item.type === "studying_students")?.list;
     const flatList = onlyStudyingList?.flatMap(item => item.list);
     const onlyNewStudents = data?.find(item => item.type === "new_students" )?.list
@@ -90,7 +100,7 @@ export const Dashboard = () => {
     const result = data?.map(section => {
         const totalCount = section.list
             .flatMap(item => item.list)
-            .reduce((sum, el) => sum + el.count, 0);
+            .reduce((sum, el) => sum + (active ? el.deleted_count : el.count), 0);
 
         return {
             type: section.type,
@@ -135,20 +145,32 @@ export const Dashboard = () => {
         <DynamicModuleLoader reducers={reducers}>
 
         <div className={cls.main}>
-            <div className={cls.main__header}>
-            {renderCards()}
-            </div>
-            <div className={cls.main__center}>
-                <EditableCard extraClass={cls.main__center__card}  titleType={""} >
-                    <Barchart data={flatNewStudents}/>
-                </EditableCard>
-                <EditableCard extraClass={cls.main__center__card} titleType={""} >
-                <Chart data={flatList}/>
-                </EditableCard>
-            </div>
-            <EditableCard extraClass={cls.main__chart} titleType={""}>
-                <HorizontalChart newStudents={flatNewStudents} studyingStudents={flatList}/>
-            </EditableCard>
+            <Button onClick={() => setActive(!active)} extraClass={cls.main__btn} children={active && active ? "Yopish" : "O'chirilganlar"}/>
+            {
+                active && active ? (
+                    <div className={cls.main__header}>
+                        {renderCards()}
+                    </div>
+                ) : (
+                    <>
+                        <div className={cls.main__header}>
+                            {renderCards()}
+                        </div>
+                        <div className={cls.main__center}>
+                            <EditableCard extraClass={cls.main__center__card}  titleType={""} >
+                                <Barchart data={flatNewStudents}/>
+                            </EditableCard>
+                            <EditableCard extraClass={cls.main__center__cards} titleType={""} >
+                                <Chart data={flatList}/>
+                            </EditableCard>
+                        </div>
+                        <EditableCard extraClass={cls.main__chart} titleType={""}>
+                            <HorizontalChart newStudents={flatNewStudents} studyingStudents={flatList}/>
+                        </EditableCard>
+                    </>
+
+                )
+            }
         </div>
         </DynamicModuleLoader>
     );

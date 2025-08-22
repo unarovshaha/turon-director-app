@@ -11,7 +11,8 @@ export const Chart = ({data}) => {
     }))
 
     return (
-        <div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
+        <div style={{display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", textAlign: 'center', gap:'2rem'}}>
+            <h1>Barcha filiallar bo'yicha ta'lim o'quvchilar statistikasi</h1>
             <PieChart
                 series={[
                     {
@@ -21,7 +22,7 @@ export const Chart = ({data}) => {
                             {id: 2, value: 10, label: 'Sergeli'},
                         ],
                         innerRadius: 60,
-                        outerRadius: 120,
+                        outerRadius: 100,
                         paddingAngle: 5,
                         cornerRadius: 5,
 
@@ -30,8 +31,8 @@ export const Chart = ({data}) => {
                     },
 
                 ]}
-                width={400}
-                height={400}
+                width={200}
+                height={260}
                 slotProps={{
                     tooltip: {
                         sx: {
@@ -44,7 +45,7 @@ export const Chart = ({data}) => {
                     },
                 }}
             />
-            <h1>Barcha filiallar bo'yicha ta'lim o'quvchilar statistikasi</h1>
+
         </div>
     );
 };
@@ -53,7 +54,7 @@ export const Chart = ({data}) => {
 export const Barchart = ({ data }) => {
 
     if (!data) return <DefaultLoader/>
-
+    const colors = ["#4ade80", "#60a5fa", "#facc15", "#f87171", "#a78bfa", "#f472b6"]
     const formattedData = data?.map(item => ({
         value: item.count,
         label: item.name,
@@ -66,13 +67,15 @@ export const Barchart = ({ data }) => {
     return (
         <div>
             <BarChart
-                width={800}
-                height={400}
+                width={500}
+                height={300}
                 series={[
                     {
                         data: values,
                         label: "Yangi o'quvchilar soni",
                         id: 'filialCount',
+                        colorMap: colors,
+
                     },
                 ]}
                 xAxis={[{ data: labels }]}
@@ -132,7 +135,7 @@ export const HorizontalChart = ({newStudents, studyingStudents}) => {
                     {id: 1, value: 1, label: 'Chirchiq'},
                     {id: 2, value: 10, label: 'Sergeli'},
                 ] }
-                yAxis={[{ scaleType: 'band', dataKey: 'name', width: 120 }]}
+                yAxis={[{ scaleType: 'band', dataKey: 'name', width: 80 }]}
                 series={[
                     { dataKey: 'percentage', label: 'Filiallarning ishlash unumdorligi', valueFormatter },
                 ]}

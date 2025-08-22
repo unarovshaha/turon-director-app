@@ -3,6 +3,7 @@ import {fetchLocationsThunk} from "features/locations/model/thunk/locationsThunk
 
 const initialState = {
     locations: [],
+    taskLoc: [],
     systemId: null,
     selectedLocations: [],
     loading: false,
@@ -72,6 +73,8 @@ export const locationsSlice = createSlice({
 
 
                 state.systemId = action.payload.systemId
+                state.taskLoc = action.payload.list
+                console.log(action.payload, 'pauy')
 
                 const localstorageLocs = JSON.parse(localStorage.getItem("selectedLocations"))
 
