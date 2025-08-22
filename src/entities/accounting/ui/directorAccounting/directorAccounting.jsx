@@ -103,12 +103,12 @@ export const DirectorAccounting = ({data}) => {
                                                 <div className={cls.main__card__content__box__inner__sum}>
                                                     <h3>Amount</h3>
                                                     <h4 style={item.summa === 0 ? {color: "#ccc"} : {color: "#39ae60"}}>{formatCurrency(item.summa)}</h4>
-                                                    {
-                                                        item.summa === 0 ? <span
-                                                            className={cls.main__card__content__box__inner__sum__handler}>
-                                                        Ma'lumot topilmadi
-                                                    </span> : null
-                                                    }
+                                                    {/*{*/}
+                                                    {/*    item.summa === 0 ? <span*/}
+                                                    {/*        className={cls.main__card__content__box__inner__sum__handler}>*/}
+                                                    {/*    Ma'lumot topilmadi*/}
+                                                    {/*</span> : null*/}
+                                                    {/*}*/}
 
                                                 </div>
                                             ))

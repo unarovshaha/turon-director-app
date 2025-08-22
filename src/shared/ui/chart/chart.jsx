@@ -12,7 +12,7 @@ export const Chart = ({data}) => {
 
     return (
         <div style={{display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", textAlign: 'center', gap:'2rem'}}>
-            <h1>Barcha filiallar bo'yicha ta'lim o'quvchilar statistikasi</h1>
+            <h1 style={{fontSize: "1.3rem"}}>Barcha filiallar bo'yicha ta'lim o'quvchilar statistikasi</h1>
             <PieChart
                 series={[
                     {
@@ -21,8 +21,8 @@ export const Chart = ({data}) => {
                             {id: 1, value: 1, label: 'Chirchiq'},
                             {id: 2, value: 10, label: 'Sergeli'},
                         ],
-                        innerRadius: 60,
-                        outerRadius: 100,
+                        innerRadius: 40,
+                        outerRadius: 80,
                         paddingAngle: 5,
                         cornerRadius: 5,
 
@@ -31,8 +31,8 @@ export const Chart = ({data}) => {
                     },
 
                 ]}
-                width={200}
-                height={260}
+                width={180}
+                height={160}
                 slotProps={{
                     tooltip: {
                         sx: {
@@ -68,7 +68,7 @@ export const Barchart = ({ data }) => {
         <div>
             <BarChart
                 width={500}
-                height={300}
+                height={200}
                 series={[
                     {
                         data: values,
@@ -120,9 +120,9 @@ export const HorizontalChart = ({newStudents, studyingStudents}) => {
             },
         ],
 
-        height: 400,
+        height: 200,
         layout: 'horizontal',
-        margin: { left: 100 },
+        margin: { left: 20 },
     };
     const valueFormatter = (value) => {
         return `${value}%`;

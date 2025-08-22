@@ -73,13 +73,13 @@ const cardNames = {
 }
 
 const cardIcons = {
-    studying_students: <i style={{fontSize: "5rem", color: "#FA9757"}}  className="fa-solid fa-graduation-cap"></i>,
-    teachers: <i style={{fontSize: "5rem",color: "#7C76DE"}} className="fa-solid fa-people-group"></i>,
-    worker: <i style={{fontSize: "5rem",color: "#02B2D4"}} className="fa-solid fa-users-line"></i>,
-    groups: <i style={{fontSize: "5rem",color:  "#49579B"}} className="fa-solid fa-children"></i>,
-    rooms: <i style={{fontSize: "5rem",color: "#6eccff"}} className="fa-solid fa-door-open"></i>,
-    new_students: <i style={{fontSize: "5rem", color: "#8dfa57"}}  className="fa-solid fa-graduation-cap"></i>,
-    leads: <i style={{fontSize: "5rem", color: "#3b82f6"}}  className="fa-solid fa-user-gear"></i>
+    studying_students: <i style={{fontSize: "3rem", color: "#FA9757"}}  className="fa-solid fa-graduation-cap"></i>,
+    teachers: <i style={{fontSize: "3rem",color: "#7C76DE"}} className="fa-solid fa-people-group"></i>,
+    worker: <i style={{fontSize: "3rem",color: "#02B2D4"}} className="fa-solid fa-users-line"></i>,
+    groups: <i style={{fontSize: "3rem",color:  "#49579B"}} className="fa-solid fa-children"></i>,
+    rooms: <i style={{fontSize: "3rem",color: "#6eccff"}} className="fa-solid fa-door-open"></i>,
+    new_students: <i style={{fontSize: "3rem", color: "#8dfa57"}}  className="fa-solid fa-graduation-cap"></i>,
+    leads: <i style={{fontSize: "3rem", color: "#3b82f6"}}  className="fa-solid fa-user-gear"></i>
 }
 
 
