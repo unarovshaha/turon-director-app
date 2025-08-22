@@ -11,7 +11,7 @@ export const Chart = ({data}) => {
     }))
 
     return (
-        <div style={{display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", textAlign: 'center', gap:'2rem'}}>
+        <div style={{textAlign: "center"}}>
             <h1 style={{fontSize: "1.3rem"}}>Barcha filiallar bo'yicha ta'lim o'quvchilar statistikasi</h1>
             <PieChart
                 series={[
@@ -22,7 +22,7 @@ export const Chart = ({data}) => {
                             {id: 2, value: 10, label: 'Sergeli'},
                         ],
                         innerRadius: 40,
-                        outerRadius: 80,
+                        outerRadius: 60,
                         paddingAngle: 5,
                         cornerRadius: 5,
 
@@ -31,8 +31,8 @@ export const Chart = ({data}) => {
                     },
 
                 ]}
-                width={180}
-                height={160}
+                width={140}
+                height={120}
                 slotProps={{
                     tooltip: {
                         sx: {
@@ -67,7 +67,7 @@ export const Barchart = ({ data }) => {
     return (
         <div>
             <BarChart
-                width={500}
+                width={300}
                 height={200}
                 series={[
                     {

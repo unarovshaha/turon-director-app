@@ -47,7 +47,7 @@ const typeColors2 = {
     studying_students: "#FEC59F",
     rooms: "#6eccff",
     worker: "#5BE2FD",
-    new_students: "#9ffec0",
+    new_students: "#84d5a0",
     leads: "#3b82f6"
 };
 
@@ -57,7 +57,7 @@ const typeColors = {
     studying_students: "#FA9757",
     rooms: "#2ab4ff",
     worker: "#02B2D4",
-    new_students: "#57faa3",
+    new_students: "#4cdc8f",
     leads: "#3b82f6"
 };
 
@@ -73,13 +73,13 @@ const cardNames = {
 }
 
 const cardIcons = {
-    studying_students: <i style={{fontSize: "3rem", color: "#FA9757"}}  className="fa-solid fa-graduation-cap"></i>,
-    teachers: <i style={{fontSize: "3rem",color: "#7C76DE"}} className="fa-solid fa-people-group"></i>,
-    worker: <i style={{fontSize: "3rem",color: "#02B2D4"}} className="fa-solid fa-users-line"></i>,
-    groups: <i style={{fontSize: "3rem",color:  "#49579B"}} className="fa-solid fa-children"></i>,
-    rooms: <i style={{fontSize: "3rem",color: "#6eccff"}} className="fa-solid fa-door-open"></i>,
-    new_students: <i style={{fontSize: "3rem", color: "#8dfa57"}}  className="fa-solid fa-graduation-cap"></i>,
-    leads: <i style={{fontSize: "3rem", color: "#3b82f6"}}  className="fa-solid fa-user-gear"></i>
+    studying_students: <i style={{fontSize: "1.4rem", color: "#FA9757"}}  className="fa-solid fa-graduation-cap"></i>,
+    teachers: <i style={{fontSize: "1.4rem",color: "#7C76DE"}} className="fa-solid fa-people-group"></i>,
+    worker: <i style={{fontSize: "1.4rem",color: "#02B2D4"}} className="fa-solid fa-users-line"></i>,
+    groups: <i style={{fontSize: "1.4rem",color:  "#49579B"}} className="fa-solid fa-children"></i>,
+    rooms: <i style={{fontSize: "1.4rem",color: "#6eccff"}} className="fa-solid fa-door-open"></i>,
+    new_students: <i style={{fontSize: "1.4rem", color: "#75c84b"}}  className="fa-solid fa-graduation-cap"></i>,
+    leads: <i style={{fontSize: "1.4rem", color: "#3b82f6"}}  className="fa-solid fa-user-gear"></i>
 }
 
 
@@ -163,10 +163,10 @@ export const Dashboard = () => {
                             <EditableCard extraClass={cls.main__center__cards} titleType={""} >
                                 <Chart data={flatList}/>
                             </EditableCard>
+                            <EditableCard extraClass={cls.main__chart} titleType={""}>
+                                <HorizontalChart newStudents={flatNewStudents} studyingStudents={flatList}/>
+                            </EditableCard>
                         </div>
-                        <EditableCard extraClass={cls.main__chart} titleType={""}>
-                            <HorizontalChart newStudents={flatNewStudents} studyingStudents={flatList}/>
-                        </EditableCard>
                     </>
 
                 )

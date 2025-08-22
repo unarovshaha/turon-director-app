@@ -6,8 +6,9 @@
   padding-left: 2rem
   padding-right: 2rem
   overflow: hidden
+  padding-bottom: 2rem
   flex-direction: column
-  gap: 3rem
+  gap: 2rem
   background: #FDFDFD
   align-items: center
   &__btn
@@ -29,28 +30,29 @@
     user-select: none
     align-items: center
     &__card
-      width: min(250px)
-      padding: 2rem
+      width: min(140px)
+      padding: 1rem
       //flex-shrink: 0
-      height: 140px
+      height: 100px
       border-radius: 3rem
       display: flex
       align-items: center
-      gap: 2rem
+      //gap: 2rem
       &__leftSide
         width: 100%
         display: flex
         //padding-left: 3rem
+        text-align: center
         flex-direction: column
-        gap: 2rem
+        //gap: 2rem
         h1
           font-size: clamp(1.8rem, calc(8% - 2rem), 2rem)
           color: white
           font-family: "Montserrat", sans-serif
         h2
-          font-size: 1rem
+          font-size: 1.1rem
           color: white
-          letter-spacing: .1rem
+          //letter-spacing: .1rem
           font-family: "Montserrat", sans-serif
       &__rightSide
         width: 100%
@@ -59,8 +61,8 @@
         justify-content: center
         padding-left: 1rem
         &__circle
-          width: 6rem
-          height: 6rem
+          width: 4rem
+          height: 4rem
           border-radius: 50%
           background: #FFFFFF
           display: flex
@@ -78,10 +80,10 @@
       width: fit-content
       height: 100%
     span
-      font-size: 2rem
+      font-size: 1.3rem
       font-family: "Montserrat", sans-serif
       div
-        font-size: 3rem
+        font-size: 2rem
   &__chart
     width: 100%
     display: flex
