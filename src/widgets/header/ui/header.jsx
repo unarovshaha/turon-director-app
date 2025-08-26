@@ -115,10 +115,11 @@ export const Header = () => {
         <header className={cls.header}>
             <div className={cls.header__top}>
                 <img className={cls.header__logo} src={logo} alt=""/>
-                <SearchPlatformInput
-                    defaultSearch={valueData ?? searchParams.get('search')}
-                    onSearch={setValueData}
-                />
+                <h1 className={cls.header__name}>turon international school<sup className={cls.sup}>DR</sup></h1>
+                {/*<SearchPlatformInput*/}
+                {/*    defaultSearch={valueData ?? searchParams.get('search')}*/}
+                {/*    onSearch={setValueData}*/}
+                {/*/>*/}
                 <div className={cls.inner}>
                     <Location/>
                     {

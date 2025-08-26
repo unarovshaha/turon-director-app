@@ -38,22 +38,26 @@
   &__card
     display: flex
     flex-direction: column
-    width: 100%
+    width: 300px !important
+    justify-content: space-between
     max-height: 600px
     height: 100%
     overflow: hidden
     overflow-y: auto
-    gap: 4rem
-    padding: 2rem !important
+    gap: 2rem
+    padding: 1rem !important
     &__header
       width: 100%
       display: flex
-      justify-content: space-between
+      justify-content: center
+      align-items: center
+      gap: 1rem
+      flex-direction: column
       &__span
         display: flex
         gap: 1rem
         align-items: center
-        font-size: 1.3rem
+        font-size: 1rem
         h2
           color: black
           text-transform: capitalize
@@ -66,10 +70,12 @@
     &__content
       width: 100%
       display: flex
+      justify-content: center
+      align-items: center
       flex-wrap: wrap
       gap: 2rem
       &__box
-        min-width: 300px
+        min-width: 200px
         min-height: 150px
         border-radius: 2rem !important
         display: flex
@@ -93,7 +99,7 @@
             border-radius: 1rem
             font-family: "Montserrat", sans-serif
             font-weight: 600
-            font-size: 1.6rem
+            font-size: 1rem
         &__inner
           width: 100%
           display: flex
@@ -109,7 +115,7 @@
               font-weight: 500
               font-family: "Montserrat", sans-serif
             h4
-              font-size: 1.8rem
+              font-size: 1.3rem
               color: #39ae60
             &__handler
               background: #eff1f1
@@ -246,7 +252,7 @@
           font-family: "Montserrat", sans-serif
           text-transform: uppercase
       &__card
-        width: 90%
+        width: 30%
         padding: 0 !important
         border-radius: 1.3rem !important
         overflow: hidden
@@ -272,7 +278,7 @@
               font-size: 1.5rem
           h1
             color: #4CAF50
-            font-size: 1.9rem
+            font-size: 1.4rem
         &__items
           width: 100%
           flex-direction: column
@@ -299,7 +305,8 @@
       width: 50%
       display: flex
       align-items: center
-      flex-direction: column
+      flex-wrap: wrap
+      justify-content: center
       gap: 2rem
       &__header
         width: 100%
@@ -314,7 +321,7 @@
           font-family: "Montserrat", sans-serif
           text-transform: uppercase
       &__card
-        width: 90%
+        width: 30%
         padding: 0 !important
         border-radius: 1.3rem !important
         overflow: hidden
@@ -366,3 +373,10 @@
 
 
 
+.arrounder
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  gap: 2rem
+  justify-content: center
+  width: 100%

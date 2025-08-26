@@ -180,7 +180,7 @@ export const DirectorAccounting = ({data}) => {
                                     <div className={cls.extend__table__debt__card__header}>
                                         <span>
                                             <div style={{background: "#22C55E", padding: "1rem", borderRadius: ".5rem"}}>
-                                                <Users color={"#FFFFFF"}/>
+                                                <Users size={15} color={"#FFFFFF"}/>
                                             </div>
 
                                            <h1>{category.name}</h1>
@@ -275,7 +275,10 @@ export const DirectorAccounting = ({data}) => {
                 if (active) {
                     return (
                         <>
-                            {renderCards()}
+                            <div className={cls.arrounder}>
+                                {renderCards()}
+                            </div>
+
 
                             <EditableCard extraClass={cls.main__summary} titleType={""}>
                                 <h1>Moliyaviy xulosa</h1>
