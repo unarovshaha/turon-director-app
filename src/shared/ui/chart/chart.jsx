@@ -67,7 +67,7 @@ export const Barchart = ({ data }) => {
     return (
         <div>
             <BarChart
-                width={300}
+                width={400}
                 height={200}
                 series={[
                     {

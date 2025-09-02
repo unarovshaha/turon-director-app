@@ -1,0 +1,1 @@
+import{c as t,A as c}from"./index-BM3qoPaZ.js";const s=t("vacancySlice/vacancyPageAddThunk",async(n,{rejectWithValue:e})=>{try{const a=await fetch(`${c}Permissions/jobs/`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(n)});if(!a.ok)throw new Error("Failed to add vacancy");return await a.json()}catch(a){return e(a.message)}});export{s as v};

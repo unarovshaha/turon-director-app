@@ -15,25 +15,39 @@ export const locationsSlice = createSlice({
     name: "locationsSlice",
     initialState,
     reducers: {
-        addSelectedLocations: (state,action) => {
-            const filteredLocation = state.locations.filter(item => item?.id === +action.payload)[0]
-            localStorage.setItem("selectedLocations", JSON.stringify([...state.selectedLocations,filteredLocation]))
-            state.selectedLocations = [...state.selectedLocations,filteredLocation]
-
-            state.locations = state.locations.map(item => {
-                if (item.id === +action.payload) {
-                    return {
-                        ...item,
-                        disabled: true
-                    }
-
+        addSelectedLocations: (state, action) => {
+            let payload = action.payload;
+            if (typeof payload === "string") {
+                try {
+                    payload = JSON.parse(payload);
+                } catch (err) {
+                    console.error("JSON parse error:", err);
                 }
-                return item
+            }
+            console.log("Yangi payload:", payload, Array.isArray(payload));
 
-            })
-            console.log(state.locations, "ededed")
+            if (Array.isArray(payload)) {
+
+                state.selectedLocations = payload;
+
+                localStorage.setItem("selectedLocations", JSON.stringify(state.selectedLocations));
 
 
+            } else {
+
+                const selected = state.locations.find(item => item.id === +payload);
+                state.selectedLocations = selected ? [selected] : [];
+
+                localStorage.setItem(
+                    "selectedLocations",
+                    JSON.stringify(state.selectedLocations)
+                );
+
+                state.locations = state.locations.map(loc => ({
+                    ...loc,
+                    disabled: loc.id === +payload,
+                }));
+            }
         },
 
         deleteSelectedLocations: (state,action) => {

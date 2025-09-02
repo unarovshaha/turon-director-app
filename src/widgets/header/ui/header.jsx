@@ -122,10 +122,6 @@ export const Header = () => {
                 {/*/>*/}
                 <div className={cls.inner}>
                     <Location/>
-                    {
-                        selectedLocations.length  < 2 ?
-                        <BranchSwitcher location={selectedLocations[0]}/> : null
-                    }
                 </div>
             </div>
             <div className={cls.header__bottom}>
@@ -149,20 +145,20 @@ export const Header = () => {
 
 
 
-                <div className={cls.header__selected}>
-                    {locations.length > 1 && selectedLocations.map(item => (
-                        <div className={cls.header__item} key={item?.id}>
-                            {
-                                selectedLocations.length >= 2 ? <i
-                                    onClick={() => onDelete(item?.id)}
-                                    className="fa fa-times"
-                                /> : null
-                            }
+                {/*<div className={cls.header__selected}>*/}
+                {/*    {locations.length > 1 && selectedLocations.map(item => (*/}
+                {/*        <div className={cls.header__item} key={item?.id}>*/}
+                {/*            {*/}
+                {/*                selectedLocations.length >= 2 ? <i*/}
+                {/*                    onClick={() => onDelete(item?.id)}*/}
+                {/*                    className="fa fa-times"*/}
+                {/*                /> : null*/}
+                {/*            }*/}
 
-                            <p>{item?.name}</p>
-                        </div>
-                    ))}
-                </div>
+                {/*            <p>{item?.name}</p>*/}
+                {/*        </div>*/}
+                {/*    ))}*/}
+                {/*</div>*/}
             </div>
         </header>
     );

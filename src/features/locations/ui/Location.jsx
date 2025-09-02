@@ -19,20 +19,33 @@ export const Location = ({systemId}) => {
 
 
     const locations = useSelector(getLocations)
-    // const selectedLocationsById = useSelector(getSelectedLocationsByIds)
-    const selectedLocations = useSelector(getSelectedLocations)
+    const formattedData = [
+        {
+            id: JSON.stringify(locations.map(loc => ({ id: loc.id, name: loc.name }))),
+            name: "Hammasi",
+        },
+        ...locations.map(item => ({
+            id: item.id,
+            name: item.name,
+        }))
+    ];
+
     const loading = useSelector(getLocationLoading)
 
-    const [isLocal,setIsSetLocal] = useState(false)
+
 
 
     const dispatch = useDispatch();
 
-    console.log(locations, 'dddd')
+    console.log(formattedData, 'dddd')
+    console.log(locations, 'ddddddd')
+
+
 
 
 
     const changeSelectedLocation = useCallback( (id) => {
+
         dispatch(addSelectedLocations(id))
     },[]);
 
@@ -47,23 +60,22 @@ export const Location = ({systemId}) => {
 
     return (
         <div className={cls.locations}>
-
-
-            {
-                locations.length > 1 ?
-                    <Select
-                        // title={"Location"}
-                        onChangeOption={changeSelectedLocation}
-                        options={locations}
-                        defaultValue={selectedLocations.length === 1 ? "clear" : ""}
-                    />
-                    :
-                    selectedLocations?.[0]?.name ?
-                    <div className={cls.location}>
-                        <span>Location:</span>
-                        <span>{selectedLocations?.[0]?.name}</span>
-                    </div> : null
-            }
+            <Select options={formattedData  } onChangeOption={changeSelectedLocation}/>
+            {/*{*/}
+            {/*    locations.length > 1 ?*/}
+            {/*        <Select*/}
+            {/*            // title={"Location"}*/}
+            {/*            onChangeOption={changeSelectedLocation}*/}
+            {/*            options={locations}*/}
+            {/*            defaultValue={selectedLocations.length === 1 ? "clear" : ""}*/}
+            {/*        />*/}
+            {/*        :*/}
+            {/*        selectedLocations?.[0]?.name ?*/}
+            {/*        <div className={cls.location}>*/}
+            {/*            <span>Location:</span>*/}
+            {/*            <span>{selectedLocations?.[0]?.name}</span>*/}
+            {/*        </div> : null*/}
+            {/*}*/}
 
         </div>
     );

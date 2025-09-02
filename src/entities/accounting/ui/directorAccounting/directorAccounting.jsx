@@ -223,7 +223,7 @@ export const DirectorAccounting = ({data}) => {
                                     <div className={cls.extend__table__credit__card__header}>
                                         <span>
                                             <div style={{background: "#EF4444", padding: "1rem", borderRadius: ".5rem"}}>
-                                                <DollarSign color={"#FFFFFF"}/>
+                                                <DollarSign size={15} color={"#FFFFFF"}/>
                                             </div>
 
                                            <h1>{category.name}</h1>
